@@ -1,0 +1,147 @@
+[
+ {
+  "mode": "replace",
+  "kategori": "Chocolate Fountain",
+  "nama": "Chocolate Fountain",
+  "varian": "Ekonomis",
+  "text": "Melon 30 pcs; Strawberry 30 pcs; Anggur 30 pcs; Marshmallow 30 pcs; Astor 50 pcs; Tusukan 1 pax; Cokelat Diamond 1 kg; Mesin kecil\nPaket Crazy Deal / Promo: isi sama, cokelat \"Dunia\" 1 kg\nCatatan belanja: marshmallow 1 kg isi 200 pcs",
+  "old": "Melon 30 pcs; Strawberry 30 pcs; Anggur 30 pcs; Marshmallow 30 pcs; Wafer stick 50 pcs; Cokelat 1 kg; Mesin kecil"
+ },
+ {
+  "mode": "replace",
+  "kategori": "Chocolate Fountain",
+  "nama": "Chocolate Fountain",
+  "varian": "Paket 1",
+  "text": "Melon 50 pcs; Strawberry 50 pcs; Anggur 50 pcs; Marshmallow 100 pcs; Astor 100 pcs; Tusukan 2 pax; Cokelat Diamond 3 kg; Mesin besar\nCatatan belanja: marshmallow 1 kg isi 200 pcs",
+  "old": "Melon 50 pcs; Strawberry 50 pcs; Anggur 50 pcs; Marshmallow 100 pcs; Wafer stick 100 pcs; Cokelat 3 kg; Mesin besar"
+ },
+ {
+  "mode": "replace",
+  "kategori": "Chocolate Fountain",
+  "nama": "Chocolate Fountain",
+  "varian": "Paket 2",
+  "text": "Melon 100 pcs; Strawberry 50 pcs; Anggur 50 pcs; Pisang 25 buah; Marshmallow 150 pcs; Astor 100 pcs; Tusukan 2 pax; Rice crispy 100 pcs; Cokelat Diamond 3 kg; Mesin besar\nCatatan belanja: marshmallow 1 kg isi 200 pcs",
+  "old": "Melon 100 pcs; Strawberry 50 pcs; Anggur 50 pcs; Pisang 50 pcs; Marshmallow 150 pcs; Wafer stick 100 pcs; Rice crispy 100 pcs; Cokelat 3 kg; Mesin besar"
+ },
+ {
+  "mode": "replace",
+  "kategori": "Chocolate Fountain",
+  "nama": "Chocolate Fountain",
+  "varian": "Paket 3",
+  "text": "Melon 100 pcs; Strawberry 100 pcs; Anggur 100 pcs; Pisang 25 buah; Marshmallow 200 pcs; Astor 200 pcs; Tusukan 3 pax; Rice crispy 150 pcs; Wafer stick Nissin 100 pcs; Cokelat Diamond 4 kg; Mesin besar\nCatatan belanja: marshmallow 1 kg isi 200 pcs",
+  "old": "Melon 100 pcs; Strawberry 100 pcs; Anggur 100 pcs; Pisang 50 pcs; Marshmallow 200 pcs; Wafer stick 200 pcs; Rice crispy 150 pcs; Stick biskuit 100 pcs; Cokelat 4 kg; Mesin besar"
+ },
+ {
+  "mode": "replace",
+  "kategori": "Chocolate Fountain",
+  "nama": "Chocolate Fountain",
+  "varian": "Paket 4",
+  "text": "Melon 200 pcs; Strawberry 200 pcs; Anggur 200 pcs; Pisang 50 buah; Marshmallow 300 pcs; Astor 400 pcs; Tusukan 5 pax; Rice crispy 200 pcs; Wafer stick Nissin 500 pcs; Cokelat Diamond 6 kg; Mesin besar\nCatatan belanja: marshmallow 1 kg isi 200 pcs",
+  "old": "Melon 200 pcs; Strawberry 200 pcs; Anggur 200 pcs; Pisang 100 pcs; Marshmallow 300 pcs; Wafer stick 400 pcs; Rice crispy 200 pcs; Stick biskuit 500 pcs; Cokelat 6 kg; Mesin besar"
+ },
+ {
+  "mode": "append",
+  "kategori": "Waffle Series",
+  "nama": "Waffle",
+  "varian": null,
+  "text": "Selai Golden Fill rasa cokelat / blueberry / strawberry"
+ },
+ {
+  "mode": "append",
+  "kategori": "Waffle Series",
+  "nama": "Waffle Ice Cream",
+  "varian": null,
+  "text": "Selai Golden Fill rasa cokelat / strawberry / caramel"
+ },
+ {
+  "mode": "append",
+  "kategori": "Waffle Series",
+  "nama": "Korean Waffle",
+  "varian": null,
+  "text": "Whipped cream\nSelai Golden Fill rasa coklat / tiramisu / matcha / strawberry"
+ },
+ {
+  "mode": "append",
+  "kategori": "Waffle Series",
+  "nama": "Croffle",
+  "varian": null,
+  "text": "Adonan croffle\nSelai Golden Fill rasa cokelat / blueberry / strawberry"
+ },
+ {
+  "mode": "append",
+  "kategori": "Waffle Series",
+  "nama": "Croffle Ice Cream",
+  "varian": null,
+  "text": "Adonan croffle\nSelai Golden Fill rasa cokelat / strawberry / caramel"
+ },
+ {
+  "mode": "append",
+  "kategori": "Waffle Series",
+  "nama": "Korean Croffle",
+  "varian": null,
+  "text": "Whipped cream\nAdonan croffle\nSelai Golden Fill rasa coklat / tiramisu / matcha / strawberry"
+ },
+ {
+  "mode": "append",
+  "kategori": "Pancake Series",
+  "nama": "Fish Pancake Original",
+  "varian": null,
+  "text": "Filling: Selai Tulip rasa strawberry / blueberry / choco / matcha / oreo"
+ },
+ {
+  "mode": "append",
+  "kategori": "Pancake Series",
+  "nama": "Fish Pancake Mozzarella",
+  "varian": null,
+  "text": "Filling: Selai Tulip rasa strawberry / blueberry / choco / matcha / oreo"
+ },
+ {
+  "mode": "append",
+  "kategori": "Pancake Series",
+  "nama": "Coin Pancake Premium",
+  "varian": null,
+  "text": "Filling: Selai Tulip rasa strawberry / blueberry / choco / matcha / oreo"
+ },
+ {
+  "mode": "append",
+  "kategori": "Indomie Party",
+  "nama": "Sultan",
+  "varian": null,
+  "text": "Keju parut\nSaus yakiniku"
+ },
+ {
+  "mode": "append",
+  "kategori": "Sweet Dessert",
+  "nama": "Cupcake",
+  "varian": null,
+  "text": "1 pax dari vendor"
+ },
+ {
+  "mode": "append",
+  "kategori": "Menu Lainnya",
+  "nama": "Sate Ayam + Lontong",
+  "varian": null,
+  "text": "1 pax dari vendor"
+ },
+ {
+  "mode": "append",
+  "kategori": "Angkringan Party",
+  "nama": "Paket Nasi Kucing",
+  "varian": null,
+  "text": "Sambal terasi\nDaftar belanja angkringan (catatan di Excel; jumlah porsi acuannya tidak dicantumkan):\nTeri jengki 100 g; Cumi asin 1 kg; Tempe 4 papan besar; Tahu putih kotak kecil Rp15.000; Kulit ayam 500 g; Usus ayam 250 g; Telur puyuh 1 kg; Ati ayam 250 g; Ampela 250 g; Sandung lamur 250 g; Kikil 250 g; Bawang merah 1,5 kg; Bawang putih 1 kg; Cabe merah keriting 1 kg; Cabe setan / rawit merah 1 kg; Tomat merah 1 kg; Terasi ABC 1 renceng; Gula merah 1 kg; Kemiri 300 g; Ketumbar bubuk Rp5.000; Air kelapa; Bumbu dapur (lengkuas, kunyit, jahe, daun jeruk, daun salam) Rp10.000; Sereh Rp5.000; Kertas nasi"
+ },
+ {
+  "mode": "append",
+  "kategori": "Angkringan Party",
+  "nama": "Paket Nasi Bakar Merakyat",
+  "varian": null,
+  "text": "Nasi bakar pedas / tidak pedas\nSambal terasi\nDaftar belanja angkringan (catatan di Excel; jumlah porsi acuannya tidak dicantumkan):\nTeri jengki 100 g; Cumi asin 1 kg; Tempe 4 papan besar; Tahu putih kotak kecil Rp15.000; Kulit ayam 500 g; Usus ayam 250 g; Telur puyuh 1 kg; Ati ayam 250 g; Ampela 250 g; Sandung lamur 250 g; Kikil 250 g; Bawang merah 1,5 kg; Bawang putih 1 kg; Cabe merah keriting 1 kg; Cabe setan / rawit merah 1 kg; Tomat merah 1 kg; Terasi ABC 1 renceng; Gula merah 1 kg; Kemiri 300 g; Ketumbar bubuk Rp5.000; Air kelapa; Bumbu dapur (lengkuas, kunyit, jahe, daun jeruk, daun salam) Rp10.000; Sereh Rp5.000; Kertas nasi"
+ },
+ {
+  "mode": "append",
+  "kategori": "Angkringan Party",
+  "nama": "Paket Nasi Bakar Sultan",
+  "varian": null,
+  "text": "Nasi bakar pedas / tidak pedas\nSambal terasi\nDaftar belanja angkringan (catatan di Excel; jumlah porsi acuannya tidak dicantumkan):\nTeri jengki 100 g; Cumi asin 1 kg; Tempe 4 papan besar; Tahu putih kotak kecil Rp15.000; Kulit ayam 500 g; Usus ayam 250 g; Telur puyuh 1 kg; Ati ayam 250 g; Ampela 250 g; Sandung lamur 250 g; Kikil 250 g; Bawang merah 1,5 kg; Bawang putih 1 kg; Cabe merah keriting 1 kg; Cabe setan / rawit merah 1 kg; Tomat merah 1 kg; Terasi ABC 1 renceng; Gula merah 1 kg; Kemiri 300 g; Ketumbar bubuk Rp5.000; Air kelapa; Bumbu dapur (lengkuas, kunyit, jahe, daun jeruk, daun salam) Rp10.000; Sereh Rp5.000; Kertas nasi"
+ }
+]

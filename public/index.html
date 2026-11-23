@@ -1,0 +1,1106 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Dapur Nusantara — Masuk & Dashboard</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,500&family=IBM+Plex+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#EFE9DA;
+    --paper:#F8F3E7;
+    --ink:#22271F;
+    --muted:#6E6B5E;
+    --line:#DCD3B9;
+    --chili:#B3392A;
+    --chili-soft:#F1DCD5;
+    --turmeric:#B87F17;
+    --turmeric-soft:#F1E4C6;
+    --leaf:#3E7A52;
+    --leaf-soft:#DCE9DD;
+    --steel:#40506B;
+    --steel-soft:#DEE3EC;
+    --radius-s:4px;
+    --radius-m:8px;
+    --shadow: 0 1px 0 rgba(34,39,31,0.06);
+    box-sizing:border-box;
+    padding-top: env(safe-area-inset-top, 0px);
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+  }
+  :root:not([data-theme="light"]){
+    @media (prefers-color-scheme: dark){
+      --bg:#161A14; --paper:#1E241C; --ink:#ECE7D8; --muted:#9B9683; --line:#333C2C;
+      --chili:#E37561; --chili-soft:#3A2620; --turmeric:#E3B255; --turmeric-soft:#3A3120;
+      --leaf:#79C293; --leaf-soft:#20342A; --steel:#9CB0D6; --steel-soft:#22293A;
+      --shadow: 0 1px 0 rgba(0,0,0,0.3);
+    }
+  }
+  :root[data-theme="dark"]{
+    --bg:#161A14; --paper:#1E241C; --ink:#ECE7D8; --muted:#9B9683; --line:#333C2C;
+    --chili:#E37561; --chili-soft:#3A2620; --turmeric:#E3B255; --turmeric-soft:#3A3120;
+    --leaf:#79C293; --leaf-soft:#20342A; --steel:#9CB0D6; --steel-soft:#22293A;
+    --shadow: 0 1px 0 rgba(0,0,0,0.3);
+  }
+  *{ box-sizing:border-box; }
+  html,body{ height:100%; margin:0; }
+  html{ scroll-padding-top: env(safe-area-inset-top, 0px); }
+  body{
+    background:var(--bg); color:var(--ink);
+    font-family:'Plus Jakarta Sans', system-ui, sans-serif;
+    -webkit-font-smoothing:antialiased;
+  }
+  .mono{ font-family:'IBM Plex Mono', ui-monospace, monospace; }
+  [hidden]{ display:none !important; }
+
+  /* ============ LOGIN SCREEN ============ */
+  #screen-login{
+    min-height:100%; display:flex; align-items:center; justify-content:center; padding:32px 18px;
+  }
+  .stage{
+    width:100%; max-width:1040px;
+    display:grid; grid-template-columns:1.1fr 1fr;
+    background:var(--paper); border:1px solid var(--line); border-radius:14px;
+    overflow:hidden; min-height:560px;
+  }
+  @media (max-width:820px){ .stage{ grid-template-columns:1fr; min-height:auto; } }
+
+  .side{
+    background:var(--ink); color:var(--paper);
+    padding:44px 38px; display:flex; flex-direction:column; justify-content:space-between;
+    position:relative; overflow:hidden;
+  }
+  @media (max-width:820px){ .side{ padding:32px 28px; } }
+  .side::before{
+    content:""; position:absolute; inset:0;
+    background: repeating-linear-gradient(180deg, transparent 0 34px, rgba(248,243,231,0.05) 34px 35px);
+    pointer-events:none;
+  }
+  .side-mark{ width:38px; height:38px; border-radius:6px; background:var(--paper); color:var(--ink);
+    display:flex; align-items:center; justify-content:center; font-weight:700; font-family:'IBM Plex Mono',monospace; font-size:16px; }
+  .side h2{ font-size:28px; line-height:1.28; margin:26px 0 0; font-weight:700; letter-spacing:-0.01em; max-width:20ch; }
+  .side p{ color:rgba(248,243,231,0.6); font-size:13.5px; margin:14px 0 0; max-width:32ch; line-height:1.6; }
+
+  .ticket-preview{
+    background:rgba(248,243,231,0.06); border:1px solid rgba(248,243,231,0.16);
+    border-radius:8px; padding:16px 16px 14px; margin-top:32px; position:relative; z-index:1;
+  }
+  .ticket-preview .row{ display:flex; justify-content:space-between; font-size:12px; margin-bottom:9px; color:rgba(248,243,231,0.55); }
+  .ticket-preview .row b{ color:var(--paper); font-family:'IBM Plex Mono',monospace; font-weight:600; }
+  .ticket-preview .status{
+    display:inline-flex; align-items:center; gap:6px; font-size:11.5px; font-weight:600; color:#E3B255;
+    background:rgba(227,178,85,0.12); padding:3px 9px; border-radius:20px;
+  }
+  .ticket-preview .status::before{ content:""; width:6px; height:6px; border-radius:50%; background:currentColor; }
+
+  .form-side{ padding:44px 40px; display:flex; flex-direction:column; justify-content:center; }
+  @media (max-width:820px){ .form-side{ padding:32px 28px 40px; } }
+  .form-head h1{ margin:0 0 6px; font-size:22px; letter-spacing:-0.01em; }
+  .form-head p{ margin:0 0 26px; font-size:13.5px; color:var(--muted); }
+
+  .role-picker{ display:flex; gap:8px; margin-bottom:22px; }
+  .role-opt{
+    flex:1; cursor:pointer; border:1px solid var(--line); border-radius:var(--radius-m);
+    padding:11px 10px; text-align:center; background:var(--bg); transition:border-color .15s ease, background .15s ease;
+    position:relative;
+  }
+  .role-opt input{ position:absolute; opacity:0; inset:0; margin:0; cursor:pointer; }
+  .role-opt .ico{ font-size:17px; display:block; margin-bottom:4px; }
+  .role-opt .txt{ font-size:12px; font-weight:700; color:var(--muted); }
+  .role-opt:has(input:checked)[data-r="admin"]{ border-color:var(--steel); background:var(--steel-soft); }
+  .role-opt:has(input:checked)[data-r="admin"] .txt{ color:var(--steel); }
+  .role-opt:has(input:checked)[data-r="dapur"]{ border-color:var(--turmeric); background:var(--turmeric-soft); }
+  .role-opt:has(input:checked)[data-r="dapur"] .txt{ color:var(--turmeric); }
+  .role-opt:has(input:checked)[data-r="kurir"]{ border-color:var(--leaf); background:var(--leaf-soft); }
+  .role-opt:has(input:checked)[data-r="kurir"] .txt{ color:var(--leaf); }
+  .role-opt:focus-within{ outline:2px solid var(--ink); outline-offset:2px; }
+
+  .field{ margin-bottom:15px; }
+  .field label{ display:block; font-size:12.5px; font-weight:600; color:var(--muted); margin-bottom:6px; }
+  .field input{
+    width:100%; padding:11px 13px; border:1px solid var(--line); border-radius:var(--radius-s);
+    background:var(--bg); color:var(--ink); font-family:inherit; font-size:14px;
+  }
+  .field input:focus{ outline:2px solid var(--ink); outline-offset:1px; border-color:transparent; }
+  .field.pass{ position:relative; }
+  .toggle-pass{
+    position:absolute; right:10px; top:34px; background:none; border:none; cursor:pointer;
+    font-size:11.5px; font-weight:600; color:var(--muted); font-family:inherit;
+  }
+
+  .row-between{ display:flex; align-items:center; justify-content:space-between; margin:2px 0 20px; font-size:12.5px; }
+  .remember{ display:flex; align-items:center; gap:7px; color:var(--muted); }
+  .remember input{ accent-color:var(--ink); }
+  .forgot{ color:var(--ink); font-weight:600; text-decoration:none; border-bottom:1px solid var(--line); background:none; border-top:none; border-left:none; border-right:none; cursor:pointer; font-family:inherit; font-size:inherit; padding:0; }
+  .forgot:hover{ border-color:var(--ink); }
+
+  .submit{
+    width:100%; border:none; border-radius:var(--radius-s); padding:13px; font-family:inherit;
+    font-size:14px; font-weight:700; cursor:pointer; background:var(--ink); color:var(--paper);
+    transition:filter .15s ease;
+  }
+  .submit:hover{ filter:brightness(1.15); }
+  @media (prefers-color-scheme:dark){ .submit{ color:var(--bg); } }
+  :root[data-theme="dark"] .submit{ color:var(--bg); }
+
+  .hint{ margin-top:16px; text-align:center; font-size:12px; color:var(--muted); }
+  .hint b{ color:var(--ink); font-family:'IBM Plex Mono',monospace; }
+
+  .msg{
+    display:none; align-items:center; gap:8px; border-radius:var(--radius-s);
+    padding:10px 12px; font-size:12.5px; font-weight:600; margin-bottom:15px;
+  }
+  .msg.show{ display:flex; }
+  .msg.err{ background:var(--chili-soft); color:var(--chili); }
+  .msg.ok{ background:var(--leaf-soft); color:var(--leaf); }
+
+  /* ============ APP SCREEN ============ */
+  #screen-app{ min-height:100%; }
+  header.top{
+    position:sticky; top:0; z-index:20;
+    padding-top: env(safe-area-inset-top, 0px);
+    background:var(--paper); border-bottom:1px solid var(--line);
+  }
+  .top-inner{
+    max-width:1180px; margin:0 auto;
+    display:flex; align-items:center; justify-content:space-between;
+    padding:14px 20px; gap:16px; flex-wrap:wrap;
+  }
+  .brand{ display:flex; align-items:center; gap:10px; }
+  .brand-mark{
+    width:34px; height:34px; border-radius:var(--radius-s);
+    background:var(--ink); color:var(--paper);
+    display:flex; align-items:center; justify-content:center;
+    font-family:'IBM Plex Mono', monospace; font-weight:700; font-size:15px; flex:none;
+  }
+  .brand-text h1{ margin:0; font-size:16px; font-weight:700; letter-spacing:-0.01em; }
+  .brand-text p{ margin:0; font-size:12px; color:var(--muted); }
+
+  .who{ display:flex; align-items:center; gap:12px; }
+  .who-avatar{ width:34px; height:34px; border-radius:50%; display:flex; align-items:center; justify-content:center;
+    font-weight:700; font-family:'IBM Plex Mono',monospace; font-size:13px; flex:none; }
+  .who-avatar.admin{ background:var(--steel-soft); color:var(--steel); }
+  .who-avatar.dapur{ background:var(--turmeric-soft); color:var(--turmeric); }
+  .who-avatar.kurir{ background:var(--leaf-soft); color:var(--leaf); }
+  .who-text{ line-height:1.25; }
+  .who-text .name{ font-size:13px; font-weight:700; }
+  .who-text .role{ font-size:11.5px; color:var(--muted); }
+  .logout-btn{
+    border:1px solid var(--line); background:var(--bg); color:var(--ink); border-radius:20px;
+    padding:8px 15px; font-family:inherit; font-size:12.5px; font-weight:700; cursor:pointer;
+  }
+  .logout-btn:hover{ border-color:var(--chili); color:var(--chili); }
+
+  main{ max-width:1180px; margin:0 auto; padding:28px 20px 64px; }
+  .panel{ display:none; animation:fade .35s ease; }
+  .panel.active{ display:block; }
+  @keyframes fade{ from{opacity:0; transform:translateY(4px);} to{opacity:1; transform:none;} }
+  @media (prefers-reduced-motion: reduce){ .panel{ animation:none; } }
+
+  .panel-head{ display:flex; align-items:baseline; justify-content:space-between; gap:12px; margin-bottom:20px; flex-wrap:wrap; }
+  .panel-head h2{ margin:0 0 4px; font-size:22px; letter-spacing:-0.01em; }
+  .panel-head p{ margin:0; color:var(--muted); font-size:13.5px; }
+  .panel-head .today{ font-size:12.5px; color:var(--muted); }
+
+  .kpi-row{ display:grid; grid-template-columns:repeat(4,1fr); gap:12px; margin-bottom:24px; }
+  @media (max-width:820px){ .kpi-row{ grid-template-columns:repeat(2,1fr); } }
+  .kpi{ background:var(--paper); border:1px solid var(--line); border-radius:var(--radius-m); padding:16px 16px 14px; box-shadow:var(--shadow); }
+  .kpi .label{ font-size:12px; color:var(--muted); margin-bottom:8px; }
+  .kpi .value{ font-size:26px; font-weight:700; letter-spacing:-0.02em; font-family:'IBM Plex Mono', monospace; }
+  .kpi .sub{ font-size:12px; color:var(--muted); margin-top:4px; }
+
+  .admin-grid{ display:grid; grid-template-columns:1.6fr 1fr; gap:16px; align-items:start; }
+  @media (max-width:900px){ .admin-grid{ grid-template-columns:1fr; } }
+  .card{ background:var(--paper); border:1px solid var(--line); border-radius:var(--radius-m); }
+  .card-head{ padding:14px 16px; border-bottom:1px solid var(--line); display:flex; justify-content:space-between; align-items:center; }
+  .card-head h3{ margin:0; font-size:14.5px; font-weight:700; }
+  .card-body{ padding:12px 16px 16px; }
+
+  table.orders{ width:100%; border-collapse:collapse; font-size:13px; }
+  .table-wrap{ overflow-x:auto; }
+  table.orders th{ text-align:left; font-weight:600; color:var(--muted); font-size:11.5px; padding:8px 10px; border-bottom:1px solid var(--line); white-space:nowrap; }
+  table.orders td{ padding:9px 10px; border-bottom:1px solid var(--line); vertical-align:middle; white-space:nowrap; }
+  table.orders tr:last-child td{ border-bottom:none; }
+  td.oid{ font-family:'IBM Plex Mono', monospace; font-weight:600; }
+  td.menu{ white-space:normal; max-width:220px; color:var(--muted); font-size:12.5px; }
+
+  .badge{ display:inline-flex; align-items:center; gap:5px; padding:3px 9px; border-radius:20px; font-size:11.5px; font-weight:600; }
+  .badge.baru{ background:var(--chili-soft); color:var(--chili); }
+  .badge.dimasak{ background:var(--turmeric-soft); color:var(--turmeric); }
+  .badge.siap{ background:var(--steel-soft); color:var(--steel); }
+  .badge.diantar{ background:#E2E7DA; color:#5B6B4A; }
+  @media (prefers-color-scheme:dark){ .badge.diantar{ background:#28331F; color:#B7C79F; } }
+  :root[data-theme="dark"] .badge.diantar{ background:#28331F; color:#B7C79F; }
+  .badge.selesai{ background:var(--leaf-soft); color:var(--leaf); }
+
+  .delivered-list{ display:flex; flex-direction:column; gap:10px; }
+  .delivered-row{ display:flex; gap:12px; align-items:center; padding:10px; border:1px solid var(--line); border-radius:var(--radius-m); }
+  .delivered-thumb{ width:52px; height:52px; border-radius:6px; object-fit:cover; flex:none; background:var(--bg); border:1px solid var(--line); }
+  .delivered-thumb.none{ display:flex; align-items:center; justify-content:center; color:var(--muted); font-size:10px; text-align:center; }
+  .delivered-info{ flex:1; min-width:0; font-size:12.5px; }
+  .delivered-info .did{ font-family:'IBM Plex Mono',monospace; font-weight:700; }
+  .delivered-info .dmeta{ color:var(--muted); margin-top:2px; }
+  .delivered-empty{ text-align:center; color:var(--muted); font-size:12.5px; padding:20px 0; }
+
+  .account-row{ border:1px solid var(--line); border-radius:var(--radius-m); padding:14px; margin-bottom:12px; }
+  .account-row:last-child{ margin-bottom:0; }
+  .account-row-head{ display:flex; align-items:center; gap:10px; margin-bottom:10px; }
+  .account-row-avatar{ width:32px; height:32px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-weight:700; font-family:'IBM Plex Mono',monospace; font-size:12px; flex:none; }
+  .account-row-name{ font-size:13px; font-weight:700; }
+  .account-row-user{ font-size:11.5px; color:var(--muted); font-family:'IBM Plex Mono',monospace; }
+  .account-row-form{ display:flex; gap:8px; }
+  .account-row-form input{
+    flex:1; padding:8px 10px; border:1px solid var(--line); border-radius:var(--radius-s);
+    background:var(--bg); color:var(--ink); font-family:inherit; font-size:12.5px;
+  }
+  .account-row-save{
+    border:none; border-radius:var(--radius-s); padding:8px 14px; font-family:inherit; font-size:12px;
+    font-weight:700; cursor:pointer; background:var(--ink); color:var(--paper); white-space:nowrap;
+  }
+  @media (prefers-color-scheme:dark){ .account-row-save{ color:var(--bg); } }
+  :root[data-theme="dark"] .account-row-save{ color:var(--bg); }
+  .account-row-status{ font-size:11px; margin-top:6px; min-height:14px; }
+  .account-row-status.ok{ color:var(--leaf); }
+  .account-row-status.err{ color:var(--chili); }
+
+  .bars{ display:flex; flex-direction:column; gap:10px; }
+  .bar-row{ display:flex; align-items:center; gap:10px; font-size:12.5px; }
+  .bar-row .bl{ width:78px; color:var(--muted); flex:none; }
+  .bar-track{ flex:1; height:8px; background:var(--line); border-radius:20px; overflow:hidden; }
+  .bar-fill{ height:100%; border-radius:20px; }
+  .bar-row .bv{ width:22px; text-align:right; font-family:'IBM Plex Mono', monospace; flex:none; }
+
+  .kanban{ display:grid; grid-template-columns:repeat(3,1fr); gap:14px; align-items:start; }
+  @media (max-width:900px){ .kanban{ grid-template-columns:1fr; } }
+  .kcol-head{ display:flex; align-items:center; justify-content:space-between; padding:0 2px 10px; }
+  .kcol-head h3{ margin:0; font-size:13.5px; font-weight:700; display:flex; align-items:center; gap:7px; }
+  .kcol-head .count{ font-family:'IBM Plex Mono', monospace; font-size:12px; color:var(--muted); background:var(--paper); border:1px solid var(--line); padding:1px 7px; border-radius:20px; }
+  .kcol-dot{ width:8px; height:8px; border-radius:50%; }
+  .kcol-dot.baru{ background:var(--chili); }
+  .kcol-dot.dimasak{ background:var(--turmeric); }
+  .kcol-dot.siap{ background:var(--leaf); }
+  .kcol-body{ display:flex; flex-direction:column; gap:10px; min-height:40px; }
+
+  .ticket{ background:var(--paper); border:1px solid var(--line); border-radius:var(--radius-m) var(--radius-m) 0 0; border-bottom:1px dashed var(--line); padding:12px 14px 14px; position:relative; }
+  .ticket::after{ content:""; display:block; height:6px; margin:0 -1px -1px; background:repeating-linear-gradient(90deg, transparent 0 6px, var(--bg) 6px 12px); border:1px solid var(--line); border-top:none; border-radius:0 0 var(--radius-m) var(--radius-m); }
+  .ticket-top{ display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:8px; gap:8px; }
+  .ticket-id{ font-family:'IBM Plex Mono', monospace; font-weight:700; font-size:14.5px; }
+  .ticket-timer{ font-family:'IBM Plex Mono', monospace; font-size:11.5px; color:var(--muted); padding:2px 7px; border-radius:20px; background:var(--bg); border:1px solid var(--line); }
+  .ticket-timer.urgent{ color:var(--chili); background:var(--chili-soft); border-color:transparent; }
+  .ticket-cust{ font-size:13px; font-weight:600; margin-bottom:6px; }
+  .ticket-items{ margin:0 0 12px; padding:0; list-style:none; font-size:12.5px; color:var(--muted); display:flex; flex-direction:column; gap:2px; }
+  .ticket-items li::before{ content:"— "; color:var(--line); }
+
+  .ticket-komposisi{
+    background:var(--turmeric-soft); border-radius:var(--radius-s); padding:9px 10px;
+    margin:0 0 10px; display:flex; flex-direction:column; gap:8px;
+  }
+  .komposisi-row + .komposisi-row{ border-top:1px dashed rgba(184,127,23,0.25); padding-top:8px; }
+  .komposisi-item{ font-size:11.5px; font-weight:700; color:var(--turmeric); margin-bottom:2px; }
+  .komposisi-detail{ font-size:11.5px; color:var(--ink); line-height:1.5; }
+  .ticket-btn{ width:100%; border:none; border-radius:var(--radius-s); padding:9px 10px; font-family:inherit; font-size:12.5px; font-weight:700; cursor:pointer; transition:filter .15s ease; }
+  .ticket-btn:hover{ filter:brightness(0.94); }
+  .ticket-btn.to-dimasak{ background:var(--turmeric); color:#fff; }
+  .ticket-btn.to-siap{ background:var(--leaf); color:#fff; }
+  .ticket-btn.done{ background:var(--bg); color:var(--muted); cursor:default; }
+  .empty-col{ border:1px dashed var(--line); border-radius:var(--radius-m); padding:22px 14px; text-align:center; color:var(--muted); font-size:12.5px; }
+
+  .kurir-top{ display:flex; gap:16px; align-items:center; background:var(--paper); border:1px solid var(--line); border-radius:var(--radius-m); padding:14px 18px; margin-bottom:22px; flex-wrap:wrap; }
+  .courier-avatar{ width:44px; height:44px; border-radius:50%; background:var(--leaf-soft); color:var(--leaf); display:flex; align-items:center; justify-content:center; font-weight:700; font-family:'IBM Plex Mono',monospace; flex:none; }
+  .courier-id h3{ margin:0; font-size:14.5px; }
+  .courier-id p{ margin:2px 0 0; font-size:12px; color:var(--muted); }
+  .kurir-stats{ display:flex; gap:22px; margin-left:auto; flex-wrap:wrap; }
+  .kurir-stats div{ text-align:right; }
+  .kurir-stats .v{ font-family:'IBM Plex Mono', monospace; font-weight:700; font-size:16px; }
+  .kurir-stats .l{ font-size:11px; color:var(--muted); }
+
+  .delivery-list{ display:flex; flex-direction:column; gap:10px; }
+  .delivery{ display:flex; gap:14px; align-items:center; background:var(--paper); border:1px solid var(--line); border-left:4px solid var(--line); border-radius:var(--radius-m); padding:13px 16px; flex-wrap:wrap; }
+  .delivery.siap{ border-left-color:var(--turmeric); }
+  .delivery.diantar{ border-left-color:var(--leaf); }
+  .delivery-main{ flex:1; min-width:200px; }
+  .delivery-id{ font-family:'IBM Plex Mono', monospace; font-weight:700; font-size:13.5px; }
+  .delivery-addr{ font-size:12.5px; color:var(--muted); margin-top:3px; }
+  .delivery-cust{ font-size:13px; font-weight:600; margin-top:5px; }
+  .delivery-actions{ flex:none; }
+  .pill-btn{ border:none; border-radius:20px; padding:8px 16px; font-family:inherit; font-size:12.5px; font-weight:700; cursor:pointer; }
+  .pill-btn.pickup{ background:var(--turmeric); color:#fff; }
+  .pill-btn.finish{ background:var(--leaf); color:#fff; }
+  .pill-btn:hover{ filter:brightness(0.94); }
+  .sec-label{ font-size:12px; font-weight:700; color:var(--muted); margin:22px 0 10px; }
+  .sec-label:first-of-type{ margin-top:0; }
+
+  footer{ text-align:center; padding:20px; color:var(--muted); font-size:11.5px; }
+
+  /* ============ NEW ORDER: button & modal ============ */
+  .new-order-btn{
+    border:none; border-radius:var(--radius-s); padding:10px 16px; font-family:inherit;
+    font-size:13px; font-weight:700; cursor:pointer; background:var(--ink); color:var(--paper);
+    transition:filter .15s ease;
+  }
+  .new-order-btn:hover{ filter:brightness(1.15); }
+  @media (prefers-color-scheme:dark){ .new-order-btn{ color:var(--bg); } }
+  :root[data-theme="dark"] .new-order-btn{ color:var(--bg); }
+
+  .modal-overlay{
+    position:fixed; inset:0; background:rgba(20,22,16,0.5); z-index:50;
+    display:flex; align-items:center; justify-content:center; padding:20px;
+    padding-top: calc(20px + env(safe-area-inset-top, 0px));
+    padding-bottom: calc(20px + env(safe-area-inset-bottom, 0px));
+  }
+  .modal{
+    width:100%; max-width:920px; max-height:100%; background:var(--paper); border:1px solid var(--line);
+    border-radius:12px; display:flex; flex-direction:column; overflow:hidden;
+  }
+  .modal-head{ padding:18px 22px; border-bottom:1px solid var(--line); display:flex; align-items:center; justify-content:space-between; gap:12px; }
+  .modal-head h3{ margin:0; font-size:16px; }
+  .modal-head p{ margin:2px 0 0; font-size:12px; color:var(--muted); }
+  .modal-close{ border:none; background:var(--bg); color:var(--muted); border-radius:50%; width:30px; height:30px; font-size:15px; cursor:pointer; flex:none; }
+  .modal-close:hover{ color:var(--chili); }
+
+  .modal-body{ display:grid; grid-template-columns:1.4fr 1fr; gap:0; overflow:hidden; flex:1; min-height:0; }
+  @media (max-width:760px){ .modal-body{ grid-template-columns:1fr; overflow-y:auto; } }
+
+  .menu-pane{ display:flex; flex-direction:column; border-right:1px solid var(--line); min-height:0; }
+  @media (max-width:760px){ .menu-pane{ border-right:none; border-bottom:1px solid var(--line); } }
+  .menu-controls{ display:flex; gap:8px; padding:14px 16px 10px; flex-wrap:wrap; }
+  .menu-controls input, .menu-controls select{
+    font-family:inherit; font-size:12.5px; border:1px solid var(--line); border-radius:var(--radius-s);
+    background:var(--bg); color:var(--ink); padding:8px 10px;
+  }
+  .menu-controls input{ flex:1; min-width:140px; }
+  .menu-count{ padding:0 16px 8px; font-size:11.5px; color:var(--muted); }
+  .menu-list{ flex:1; overflow-y:auto; padding:0 16px 16px; min-height:220px; max-height:420px; }
+  .menu-cat-head{ font-size:11.5px; font-weight:700; color:var(--muted); margin:14px 0 6px; position:sticky; top:0; background:var(--paper); padding:4px 0; }
+  .menu-cat-head:first-child{ margin-top:0; }
+  .menu-row{ display:flex; align-items:center; gap:10px; padding:9px 0; border-bottom:1px solid var(--line); }
+  .menu-row-info{ flex:1; min-width:0; }
+  .menu-row-name{ font-size:13px; font-weight:600; }
+  .menu-row-sub{ font-size:11.5px; color:var(--muted); margin-top:2px; }
+  .menu-row-price{ font-family:'IBM Plex Mono', monospace; font-size:12px; font-weight:600; white-space:nowrap; }
+  .menu-add-btn{
+    flex:none; border:1px solid var(--line); background:var(--bg); color:var(--ink); border-radius:20px;
+    width:28px; height:28px; font-size:15px; font-weight:700; cursor:pointer; line-height:1;
+  }
+  .menu-add-btn:hover{ border-color:var(--leaf); color:var(--leaf); }
+  .menu-empty{ text-align:center; color:var(--muted); font-size:12.5px; padding:24px 0; }
+
+  .cart-pane{ display:flex; flex-direction:column; min-height:0; }
+  .cart-fields{ padding:16px 18px 4px; display:flex; flex-direction:column; gap:10px; }
+  .cart-fields input{
+    width:100%; padding:9px 11px; border:1px solid var(--line); border-radius:var(--radius-s);
+    background:var(--bg); color:var(--ink); font-family:inherit; font-size:13px;
+  }
+  .cart-fields label{ font-size:11.5px; font-weight:600; color:var(--muted); display:block; margin-bottom:4px; }
+  .cart-list{ flex:1; overflow-y:auto; padding:8px 18px; min-height:100px; }
+  .cart-empty{ text-align:center; color:var(--muted); font-size:12px; padding:20px 0; }
+  .cart-item{ display:flex; align-items:flex-start; gap:8px; padding:9px 0; border-bottom:1px solid var(--line); }
+  .cart-item-info{ flex:1; min-width:0; }
+  .cart-item-name{ font-size:12.5px; font-weight:600; }
+  .cart-item-price{ font-size:11.5px; color:var(--muted); margin-top:2px; font-family:'IBM Plex Mono', monospace; }
+  .cart-qty{ display:flex; align-items:center; gap:6px; flex:none; }
+  .qty-btn{ border:1px solid var(--line); background:var(--bg); color:var(--ink); border-radius:5px; width:22px; height:22px; font-size:13px; cursor:pointer; line-height:1; }
+  .qty-btn:hover{ border-color:var(--ink); }
+  .qty-val{ font-family:'IBM Plex Mono', monospace; font-size:12.5px; width:16px; text-align:center; }
+  .cart-remove{ border:none; background:none; color:var(--chili); font-size:11px; cursor:pointer; flex:none; padding:2px; }
+
+  .modal-foot{ padding:14px 18px; border-top:1px solid var(--line); }
+  .cart-total-row{ display:flex; justify-content:space-between; align-items:baseline; margin-bottom:12px; }
+  .cart-total-row .l{ font-size:12.5px; color:var(--muted); }
+  .cart-total-row .v{ font-size:19px; font-weight:700; font-family:'IBM Plex Mono', monospace; }
+  .submit-order-btn{
+    width:100%; border:none; border-radius:var(--radius-s); padding:12px; font-family:inherit;
+    font-size:13.5px; font-weight:700; cursor:pointer; background:var(--leaf); color:#fff;
+  }
+  .submit-order-btn:disabled{ background:var(--line); color:var(--muted); cursor:not-allowed; }
+  .modal-msg{ font-size:11.5px; color:var(--chili); margin-top:8px; text-align:center; }
+
+  /* ============ Order notes, addresses, pickup-location ============ */
+  .ticket-addr{ font-size:11.5px; color:var(--muted); margin:-3px 0 8px; }
+  .ticket-note{
+    background:var(--chili-soft); color:var(--chili); border-radius:var(--radius-s);
+    padding:7px 9px; font-size:11.5px; font-weight:600; margin-bottom:10px; line-height:1.5;
+  }
+  .ticket-note b{ font-weight:700; }
+  .ticket-location{
+    display:flex; align-items:center; gap:6px; background:var(--leaf-soft); color:var(--leaf);
+    border-radius:var(--radius-s); padding:7px 9px; font-size:11.5px; font-weight:600; margin-bottom:10px;
+  }
+  .delivery-note, .delivery-location{
+    font-size:11.5px; margin-top:5px; padding:5px 8px; border-radius:var(--radius-s);
+    display:inline-flex; align-items:center; gap:5px; font-weight:600;
+  }
+  .delivery-location{ background:var(--leaf-soft); color:var(--leaf); }
+  .delivery-note{ background:var(--chili-soft); color:var(--chili); }
+  .delivery-addr-line{ display:flex; align-items:center; gap:5px; }
+
+  .textarea-field{
+    width:100%; padding:9px 11px; border:1px solid var(--line); border-radius:var(--radius-s);
+    background:var(--bg); color:var(--ink); font-family:inherit; font-size:13px; resize:vertical; min-height:56px;
+  }
+
+  .print-btn{
+    border:1px solid var(--line); background:var(--paper); color:var(--ink); border-radius:var(--radius-s);
+    padding:9px 14px; font-family:inherit; font-size:12.5px; font-weight:700; cursor:pointer; white-space:nowrap;
+  }
+  .print-btn:hover{ border-color:var(--ink); }
+
+  /* ============ small action-modal (ready / delivered) ============ */
+  .action-modal{ max-width:420px; }
+  .action-modal .modal-body{ display:block; padding:18px 22px; overflow-y:auto; }
+  .action-summary{ background:var(--bg); border:1px solid var(--line); border-radius:var(--radius-s); padding:10px 12px; margin-bottom:14px; font-size:12.5px; }
+  .action-summary .aid{ font-family:'IBM Plex Mono',monospace; font-weight:700; margin-bottom:3px; }
+  .action-summary .acust{ color:var(--muted); }
+  .action-field{ margin-bottom:14px; }
+  .action-field label{ display:block; font-size:12px; font-weight:600; color:var(--muted); margin-bottom:6px; }
+  .action-field input[type="text"]{
+    width:100%; padding:9px 11px; border:1px solid var(--line); border-radius:var(--radius-s);
+    background:var(--bg); color:var(--ink); font-family:inherit; font-size:13px;
+  }
+  .time-readout{
+    display:flex; align-items:center; gap:8px; background:var(--bg); border:1px solid var(--line);
+    border-radius:var(--radius-s); padding:9px 11px; font-family:'IBM Plex Mono',monospace; font-size:13px;
+  }
+  .photo-capture-btn{
+    display:flex; align-items:center; justify-content:center; gap:8px; width:100%;
+    border:1px dashed var(--line); background:var(--bg); color:var(--muted); border-radius:var(--radius-s);
+    padding:16px; font-family:inherit; font-size:12.5px; font-weight:700; cursor:pointer;
+  }
+  .photo-capture-btn:hover{ border-color:var(--leaf); color:var(--leaf); }
+  .photo-preview{ display:none; width:100%; border-radius:var(--radius-s); margin-top:10px; max-height:220px; object-fit:cover; }
+  .photo-preview.show{ display:block; }
+  .action-confirm-btn{
+    width:100%; border:none; border-radius:var(--radius-s); padding:12px; font-family:inherit;
+    font-size:13.5px; font-weight:700; cursor:pointer; background:var(--leaf); color:#fff;
+  }
+  .action-confirm-btn:disabled{ background:var(--line); color:var(--muted); cursor:not-allowed; }
+  .action-foot{ padding:14px 22px 20px; border-top:1px solid var(--line); }
+
+  /* ============ Print sheets ============ */
+  .print-area{ display:none; }
+  @media print{
+    body.printing > *:not(.print-area){ display:none !important; }
+    body.printing .print-area{ display:block !important; }
+    .print-sheet{ font-family:'Plus Jakarta Sans', system-ui, sans-serif; color:#111; padding:10px; }
+    .print-sheet h1{ font-size:18px; margin:0 0 2px; }
+    .print-sheet .psub{ font-size:11px; color:#555; margin:0 0 16px; }
+    .print-sheet table{ width:100%; border-collapse:collapse; font-size:11px; }
+    .print-sheet th, .print-sheet td{ border:1px solid #999; padding:6px 7px; text-align:left; vertical-align:top; }
+    .print-sheet th{ background:#eee; }
+  }
+
+  /* ============ FITUR BARU: notifikasi, toolbar, tombol kecil ============ */
+  .sound-banner{
+    background:var(--turmeric-soft); color:var(--turmeric); border-bottom:1px solid var(--line);
+    text-align:center; padding:9px 16px; font-size:12.5px; font-weight:700; cursor:pointer;
+  }
+  .toast-stack{
+    position:fixed; top:calc(70px + env(safe-area-inset-top, 0px)); right:14px; z-index:80;
+    display:flex; flex-direction:column; gap:10px; width:min(340px, calc(100vw - 28px)); pointer-events:none;
+  }
+  .toast{
+    pointer-events:auto; background:var(--ink); color:var(--paper); border-radius:var(--radius-m);
+    padding:12px 14px; font-size:13px; line-height:1.45; box-shadow:0 6px 20px rgba(0,0,0,0.25);
+    border-left:5px solid var(--turmeric); animation:fade .25s ease; cursor:pointer;
+  }
+  .toast b{ display:block; font-size:13.5px; margin-bottom:2px; }
+  .toast.err{ border-left-color:var(--chili); }
+  .toast.ok{ border-left-color:var(--leaf); }
+  @media (prefers-color-scheme:dark){ .toast{ background:#ECE7D8; color:#161A14; } }
+  :root[data-theme="dark"] .toast{ background:#ECE7D8; color:#161A14; }
+
+  .btn-sm{
+    border:1px solid var(--line); background:var(--bg); color:var(--ink); border-radius:var(--radius-s);
+    padding:6px 10px; font-family:inherit; font-size:12px; font-weight:700; cursor:pointer; white-space:nowrap;
+  }
+  .btn-sm:hover{ border-color:var(--ink); }
+  .btn-sm.danger{ color:var(--chili); }
+  .btn-sm.danger:hover{ border-color:var(--chili); }
+  .btn-sm.primary{ background:var(--ink); color:var(--paper); border-color:var(--ink); }
+  @media (prefers-color-scheme:dark){ .btn-sm.primary{ color:var(--bg); } }
+  :root[data-theme="dark"] .btn-sm.primary{ color:var(--bg); }
+  .btn-sm:disabled{ opacity:.5; cursor:not-allowed; }
+
+  .toolbar{ display:flex; gap:8px; flex-wrap:wrap; align-items:center; padding:12px 16px; border-bottom:1px solid var(--line); }
+  .toolbar input, .toolbar select, .field-inline input, .field-inline select{
+    font-family:inherit; font-size:12.5px; border:1px solid var(--line); border-radius:var(--radius-s);
+    background:var(--bg); color:var(--ink); padding:8px 10px;
+  }
+  .toolbar input[type="search"]{ flex:1; min-width:180px; }
+  .toolbar label{ font-size:11.5px; color:var(--muted); font-weight:600; display:flex; align-items:center; gap:6px; }
+  .result-count{ font-size:11.5px; color:var(--muted); padding:8px 16px 0; }
+  .more-row{ text-align:center; padding:10px 0 2px; }
+
+  .badge.batal{ background:#E6E3DA; color:#6E6B5E; text-decoration:line-through; }
+  @media (prefers-color-scheme:dark){ .badge.batal{ background:#2B2F27; color:#9B9683; } }
+  :root[data-theme="dark"] .badge.batal{ background:#2B2F27; color:#9B9683; }
+  tr.is-batal td{ color:var(--muted); }
+  td.nowrap{ white-space:nowrap; }
+  td.act{ white-space:nowrap; text-align:right; }
+  td.act .btn-sm + .btn-sm{ margin-left:4px; }
+  .tag{ display:inline-block; font-size:10.5px; font-weight:700; padding:2px 7px; border-radius:20px; background:var(--chili-soft); color:var(--chili); vertical-align:middle; }
+  .tag.edit{ background:var(--turmeric-soft); color:var(--turmeric); }
+
+  .komposisi-detail{ white-space:pre-line; }
+  .ticket-print{ width:100%; margin:0 0 8px; padding:9px 10px; }
+  .multiline{ white-space:pre-line; }
+
+  /* detail pesanan */
+  .detail-body{ display:block !important; overflow-y:auto; padding:18px 22px; }
+  .detail-grid{ display:grid; grid-template-columns:1fr 1fr; gap:10px 22px; margin-bottom:14px; font-size:13px; }
+  @media (max-width:640px){ .detail-grid{ grid-template-columns:1fr; } }
+  .detail-grid .k{ font-size:11.5px; color:var(--muted); font-weight:600; margin-bottom:2px; }
+  .detail-items{ width:100%; border-collapse:collapse; font-size:12.5px; margin:6px 0 10px; }
+  .detail-items th{ text-align:left; font-size:11.5px; color:var(--muted); padding:6px 8px; border-bottom:1px solid var(--line); }
+  .detail-items td{ padding:8px; border-bottom:1px solid var(--line); vertical-align:top; }
+  .detail-items td.r, .detail-items th.r{ text-align:right; white-space:nowrap; }
+  .detail-items details{ margin-top:4px; }
+  .detail-items summary{ cursor:pointer; color:var(--steel); font-size:11.5px; font-weight:600; }
+  .detail-items .komp{ white-space:pre-line; color:var(--muted); font-size:11.5px; margin-top:4px; line-height:1.5; }
+  .detail-total{ display:flex; justify-content:space-between; font-weight:700; font-size:15px; padding:6px 8px; }
+  .detail-proof img{ max-width:260px; width:100%; border-radius:var(--radius-s); border:1px solid var(--line); display:block; margin-top:6px; }
+  .detail-foot{ display:flex; gap:8px; flex-wrap:wrap; justify-content:flex-end; padding:14px 22px; border-top:1px solid var(--line); }
+  .cancel-box{ background:var(--chili-soft); border-radius:var(--radius-s); padding:12px; margin-top:12px; }
+  .cancel-box label{ display:block; font-size:12px; font-weight:700; color:var(--chili); margin-bottom:6px; }
+  .cancel-box input{ width:100%; padding:9px 11px; border:1px solid var(--line); border-radius:var(--radius-s); background:var(--paper); color:var(--ink); font-family:inherit; font-size:13px; }
+  .cancel-box .row{ display:flex; gap:8px; margin-top:8px; justify-content:flex-end; }
+  .lock-note{ background:var(--turmeric-soft); color:var(--turmeric); border-radius:var(--radius-s); padding:8px 10px; font-size:11.5px; font-weight:600; margin:0 18px 8px; line-height:1.5; }
+
+  /* form menu & akun */
+  .form-pane{ padding:16px 18px; overflow-y:auto; display:flex; flex-direction:column; gap:10px; min-height:0; }
+  .form-pane label{ font-size:11.5px; font-weight:600; color:var(--muted); display:block; margin-bottom:4px; }
+  .form-pane input, .form-pane select, .form-pane textarea{
+    width:100%; padding:9px 11px; border:1px solid var(--line); border-radius:var(--radius-s);
+    background:var(--bg); color:var(--ink); font-family:inherit; font-size:13px;
+  }
+  .form-pane textarea{ min-height:110px; resize:vertical; line-height:1.5; }
+  .form-pane .two{ display:grid; grid-template-columns:1fr 1fr; gap:10px; }
+  .form-pane .hint-s{ font-size:11px; color:var(--muted); margin-top:3px; }
+  .form-actions{ display:flex; gap:8px; flex-wrap:wrap; margin-top:4px; }
+  .form-msg{ font-size:12px; font-weight:600; min-height:16px; }
+  .form-msg.err{ color:var(--chili); } .form-msg.ok{ color:var(--leaf); }
+  .menu-admin-row{ display:flex; align-items:center; gap:10px; padding:9px 0; border-bottom:1px solid var(--line); }
+  .menu-admin-row.off .menu-row-name{ color:var(--muted); text-decoration:line-through; }
+  .menu-admin-row.active-edit{ background:var(--turmeric-soft); margin:0 -8px; padding-left:8px; padding-right:8px; border-radius:4px; }
+  .acc-add{ border:1px dashed var(--line); border-radius:var(--radius-m); padding:14px; margin-bottom:14px; }
+  .acc-add h4{ margin:0 0 10px; font-size:13px; }
+  .acc-add .grid{ display:grid; grid-template-columns:1fr 1fr; gap:8px; }
+  @media (max-width:560px){ .acc-add .grid{ grid-template-columns:1fr; } }
+  .acc-add input, .acc-add select{ width:100%; padding:8px 10px; border:1px solid var(--line); border-radius:var(--radius-s); background:var(--bg); color:var(--ink); font-family:inherit; font-size:12.5px; }
+  .acc-add label{ font-size:11px; font-weight:600; color:var(--muted); display:block; margin-bottom:3px; }
+  .acc-info{ font-size:11.5px; color:var(--muted); line-height:1.55; margin:0 0 12px; }
+  .account-row-del{ border:1px solid var(--line); background:var(--bg); color:var(--chili); border-radius:var(--radius-s); padding:8px 12px; font-family:inherit; font-size:12px; font-weight:700; cursor:pointer; }
+  .account-row-del:hover{ border-color:var(--chili); }
+
+  /* laporan */
+  .report-body{ display:block !important; overflow-y:auto; padding:16px 22px 22px; }
+  .report-controls{ display:flex; flex-wrap:wrap; gap:8px; align-items:flex-end; margin-bottom:12px; }
+  .report-controls .fld label{ display:block; font-size:11px; font-weight:600; color:var(--muted); margin-bottom:3px; }
+  .report-controls input, .report-controls select{ font-family:inherit; font-size:12.5px; border:1px solid var(--line); border-radius:var(--radius-s); background:var(--bg); color:var(--ink); padding:8px 10px; }
+  .quick-range{ display:flex; flex-wrap:wrap; gap:6px; margin-bottom:12px; }
+  .report-kpis{ display:grid; grid-template-columns:repeat(4,1fr); gap:10px; margin:14px 0; }
+  @media (max-width:700px){ .report-kpis{ grid-template-columns:repeat(2,1fr); } }
+  .report-kpis .kpi .value{ font-size:19px; }
+  table.rep{ width:100%; border-collapse:collapse; font-size:12.5px; margin-bottom:18px; }
+  table.rep th{ text-align:left; font-size:11.5px; color:var(--muted); padding:7px 8px; border-bottom:1px solid var(--line); white-space:nowrap; }
+  table.rep td{ padding:8px; border-bottom:1px solid var(--line); vertical-align:top; }
+  table.rep .r{ text-align:right; white-space:nowrap; }
+  table.rep tfoot td{ font-weight:700; background:var(--turmeric-soft); }
+  .rep-h{ font-size:13.5px; font-weight:700; margin:16px 0 4px; }
+  .rep-note{ font-size:11.5px; color:var(--muted); margin:0 0 8px; line-height:1.5; }
+  .report-foot{ display:flex; gap:8px; flex-wrap:wrap; justify-content:flex-end; padding:14px 22px; border-top:1px solid var(--line); }
+
+  /* ============ Cetak tambahan (nota, daftar, laporan) ============ */
+  @media print{
+    .print-sheet .nota-head{ display:flex; justify-content:space-between; align-items:flex-start; border-bottom:2px solid #111; padding-bottom:10px; margin-bottom:12px; }
+    .print-sheet .nota-co{ font-size:16px; font-weight:800; }
+    .print-sheet .nota-co small{ display:block; font-weight:500; font-size:10.5px; color:#444; margin-top:2px; }
+    .print-sheet .nota-title{ text-align:right; font-size:18px; font-weight:800; letter-spacing:.04em; }
+    .print-sheet .nota-title small{ display:block; font-weight:600; font-size:11px; letter-spacing:0; color:#444; }
+    .print-sheet .nota-meta{ display:grid; grid-template-columns:1fr 1fr; gap:4px 24px; font-size:11.5px; margin-bottom:12px; }
+    .print-sheet .nota-meta b{ display:inline-block; min-width:92px; }
+    .print-sheet td.r, .print-sheet th.r{ text-align:right; white-space:nowrap; }
+    .print-sheet .nota-total td{ font-weight:800; font-size:12.5px; background:#f3f3f3; }
+    .print-sheet .nota-foot{ margin-top:14px; font-size:11px; color:#333; }
+    .print-sheet .nota-sign{ display:flex; justify-content:space-between; margin-top:46px; font-size:11px; text-align:center; }
+    .print-sheet .nota-sign div{ width:34%; border-top:1px solid #111; padding-top:4px; }
+    .print-sheet .komp{ white-space:pre-line; font-size:10.5px; color:#333; }
+    .print-sheet .h3p{ font-size:13px; margin:16px 0 6px; }
+    .print-sheet tr{ page-break-inside:avoid; }
+    .print-sheet .canceled td{ color:#777; text-decoration:line-through; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ================= LOGIN SCREEN ================= -->
+<div id="screen-login">
+  <div class="stage">
+    <div class="side">
+      <div>
+        <div class="side-mark">DN</div>
+        <h2>Satu pintu masuk untuk seluruh tim dapur.</h2>
+        <p>Admin memantau, dapur memasak, kurir mengantar — semua lewat akun masing-masing.</p>
+      </div>
+      <div class="ticket-preview">
+        <div class="row"><span>No. pesanan</span><b>DN-241</b></div>
+        <div class="row"><span>Menu</span><b>Rendang Daging</b></div>
+        <div class="row" style="margin-bottom:0;"><span>Status</span><span class="status">Sedang dimasak</span></div>
+      </div>
+    </div>
+
+    <div class="form-side">
+      <div class="form-head">
+        <h1>Masuk ke akun</h1>
+        <p>Pilih peranmu lalu masukkan detail akun.</p>
+      </div>
+
+      <div class="msg err" id="msg-box"></div>
+
+      <form id="login-form" novalidate>
+        <div class="role-picker">
+          <label class="role-opt" data-r="admin">
+            <input type="radio" name="role" value="admin" checked>
+            <span class="ico">🗂️</span><span class="txt">Admin</span>
+          </label>
+          <label class="role-opt" data-r="dapur">
+            <input type="radio" name="role" value="dapur">
+            <span class="ico">🍳</span><span class="txt">Dapur</span>
+          </label>
+          <label class="role-opt" data-r="kurir">
+            <input type="radio" name="role" value="kurir">
+            <span class="ico">🛵</span><span class="txt">Kurir</span>
+          </label>
+        </div>
+
+        <div class="field">
+          <label for="username">Nama pengguna</label>
+          <input type="text" id="username" name="username" placeholder="mis. admin.dapur" autocomplete="username">
+        </div>
+
+        <div class="field pass">
+          <label for="password">Kata sandi</label>
+          <input type="password" id="password" name="password" placeholder="Masukkan kata sandi" autocomplete="current-password">
+          <button type="button" class="toggle-pass" id="toggle-pass">Tampilkan</button>
+        </div>
+
+        <div class="row-between">
+          <label class="remember"><input type="checkbox" id="remember" checked> Ingat saya</label>
+        </div>
+
+        <button type="submit" class="submit">Masuk</button>
+      </form>
+    </div>
+  </div>
+</div>
+
+<!-- ================= APP SCREEN ================= -->
+<div id="screen-app" hidden>
+
+  <header class="top">
+    <div class="top-inner">
+      <div class="brand">
+        <div class="brand-mark">DN</div>
+        <div class="brand-text">
+          <h1>Dapur Nusantara</h1>
+          <p>Sistem operasional pesanan</p>
+        </div>
+      </div>
+      <div class="who">
+        <div class="who-avatar" id="who-avatar"></div>
+        <div class="who-text">
+          <div class="name" id="who-name"></div>
+          <div class="role" id="who-role"></div>
+        </div>
+        <button class="logout-btn" id="sound-btn" title="Suara dan notifikasi pesanan">🔔</button>
+        <button class="logout-btn" id="open-password-modal" title="Ganti password">🔒 Password</button>
+        <button class="logout-btn" id="logout-btn">Keluar</button>
+      </div>
+    </div>
+  </header>
+  <div class="sound-banner" id="sound-banner" hidden>🔔 Ketuk di sini untuk mengaktifkan suara notifikasi pesanan</div>
+  <div class="toast-stack" id="toast-stack" aria-live="polite"></div>
+
+  <main>
+
+    <!-- ADMIN -->
+    <section class="panel" id="panel-admin">
+      <div class="panel-head">
+        <div><h2>Ringkasan hari ini</h2><p>Pantau seluruh pesanan, dapur, dan kurir dalam satu layar.</p></div>
+        <div style="display:flex; align-items:center; gap:10px; flex-wrap:wrap;">
+          <div class="today mono" id="admin-date"></div>
+          <button class="print-btn" id="open-report-modal">📊 Laporan</button>
+          <button class="print-btn" id="open-menu-admin-modal">📋 Kelola menu</button>
+          <button class="print-btn" id="open-accounts-modal">👥 Kelola akun</button>
+          <button class="new-order-btn" id="open-order-modal">+ Pesanan baru</button>
+        </div>
+      </div>
+      <div class="kpi-row">
+        <div class="kpi"><div class="label">Pesanan masuk</div><div class="value" id="kpi-total">0</div><div class="sub">hari ini (tanpa batal)</div></div>
+        <div class="kpi"><div class="label">Pendapatan</div><div class="value" id="kpi-revenue">Rp0</div><div class="sub">hari ini</div></div>
+        <div class="kpi"><div class="label">Sedang dimasak</div><div class="value" id="kpi-cooking">0</div><div class="sub">di dapur</div></div>
+        <div class="kpi"><div class="label">Sedang diantar</div><div class="value" id="kpi-couriers">0</div><div class="sub">oleh kurir</div></div>
+      </div>
+      <div class="admin-grid">
+        <div class="card">
+          <div class="card-head"><h3>Semua pesanan</h3><button class="btn-sm" id="print-admin-list-btn">🖨️ Cetak daftar</button></div>
+          <div class="toolbar">
+            <input type="search" id="f-q" placeholder="Cari no. pesanan, pelanggan, alamat, menu, kurir…">
+            <select id="f-status">
+              <option value="">Semua status</option>
+              <option value="aktif">Masih berjalan</option>
+              <option value="baru">Baru</option>
+              <option value="dimasak">Dimasak</option>
+              <option value="siap">Siap diambil</option>
+              <option value="diantar">Diantar</option>
+              <option value="selesai">Selesai</option>
+              <option value="batal">Dibatalkan</option>
+            </select>
+            <label>Dari <input type="date" id="f-from"></label>
+            <label>Sampai <input type="date" id="f-to"></label>
+            <button class="btn-sm" id="f-reset">Reset</button>
+          </div>
+          <div class="result-count" id="f-count"></div>
+          <div class="card-body table-wrap">
+            <table class="orders">
+              <thead><tr><th>No.</th><th>Tanggal</th><th>Pelanggan</th><th>Menu</th><th>Kurir</th><th>Status</th><th>Total</th><th></th></tr></thead>
+              <tbody id="admin-table-body"></tbody>
+            </table>
+            <div class="more-row" id="f-more-row" hidden><button class="btn-sm" id="f-more">Tampilkan lebih banyak</button></div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-head"><h3>Distribusi status</h3></div>
+          <div class="card-body"><div class="bars" id="admin-bars"></div></div>
+        </div>
+      </div>
+
+      <div class="card" style="margin-top:16px;">
+        <div class="card-head"><h3>Pengantaran selesai</h3></div>
+        <div class="card-body" id="admin-delivered"></div>
+      </div>
+    </section>
+
+    <!-- DAPUR -->
+    <section class="panel" id="panel-dapur">
+      <div class="panel-head">
+        <div><h2>Antrean dapur</h2><p>Geser pesanan ke tahap berikutnya begitu selesai dikerjakan.</p></div>
+        <div style="display:flex; align-items:center; gap:14px;">
+          <div class="today mono" id="dapur-date"></div>
+          <input type="search" class="print-btn" id="dapur-q" placeholder="🔎 Cari pesanan…" style="font-weight:500; min-width:170px;">
+          <button class="print-btn" id="print-dapur-btn">🖨️ Cetak rekap</button>
+        </div>
+      </div>
+      <div class="kanban">
+        <div>
+          <div class="kcol-head"><h3><span class="kcol-dot baru"></span>Pesanan baru</h3><span class="count" id="count-baru">0</span></div>
+          <div class="kcol-body" id="col-baru"></div>
+        </div>
+        <div>
+          <div class="kcol-head"><h3><span class="kcol-dot dimasak"></span>Sedang dimasak</h3><span class="count" id="count-dimasak">0</span></div>
+          <div class="kcol-body" id="col-dimasak"></div>
+        </div>
+        <div>
+          <div class="kcol-head"><h3><span class="kcol-dot siap"></span>Siap diambil</h3><span class="count" id="count-siap">0</span></div>
+          <div class="kcol-body" id="col-siap"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- KURIR -->
+    <section class="panel" id="panel-kurir">
+      <div class="panel-head">
+        <div><h2>Pengantaran</h2><p>Daftar pesanan yang siap diambil dan sedang kamu antar.</p></div>
+        <div style="display:flex; align-items:center; gap:14px;">
+          <div class="today mono" id="kurir-date"></div>
+          <input type="search" class="print-btn" id="kurir-q" placeholder="🔎 Cari pesanan…" style="font-weight:500; min-width:170px;">
+          <button class="print-btn" id="print-kurir-btn">🖨️ Cetak rekap</button>
+        </div>
+      </div>
+      <div class="kurir-top">
+        <div class="courier-avatar" id="kurir-avatar"></div>
+        <div class="courier-id">
+          <h3 id="kurir-name"></h3>
+          <p>Kurir aktif</p>
+        </div>
+        <div class="kurir-stats">
+          <div><div class="v" id="kurir-count">0</div><div class="l">Kamu antar hari ini</div></div>
+          <div><div class="v" id="kurir-earn">0</div><div class="l">Sedang diantar</div></div>
+        </div>
+      </div>
+      <div class="sec-label">Siap diambil dari dapur</div>
+      <div class="delivery-list" id="kurir-siap"></div>
+      <div class="sec-label">Sedang diantar</div>
+      <div class="delivery-list" id="kurir-diantar"></div>
+    </section>
+
+  </main>
+
+  <footer>Dapur Nusantara — masuk sebagai peran yang sesuai untuk mengelola pesanan.</footer>
+
+  <!-- ORDER MODAL -->
+  <div class="modal-overlay" id="order-modal" hidden>
+    <div class="modal">
+      <div class="modal-head">
+        <div>
+          <h3 id="order-modal-title">Buat pesanan baru</h3>
+          <p id="order-modal-sub">Pilih menu dari daftar harga, lalu kirim ke dapur.</p>
+        </div>
+        <button class="modal-close" id="close-order-modal" aria-label="Tutup">✕</button>
+      </div>
+
+      <div class="modal-body">
+        <div class="menu-pane">
+          <div class="menu-controls">
+            <input type="text" id="menu-search" placeholder="Cari menu…">
+            <select id="menu-category"></select>
+          </div>
+          <div class="menu-count" id="menu-count"></div>
+          <div class="menu-list" id="menu-list"></div>
+        </div>
+
+        <div class="cart-pane">
+          <div class="cart-fields">
+            <div>
+              <label for="order-customer">Nama pelanggan</label>
+              <input type="text" id="order-customer" placeholder="mis. Budi Santoso">
+            </div>
+            <div>
+              <label for="order-address">Alamat pengantaran</label>
+              <input type="text" id="order-address" placeholder="mis. Jl. Kenanga No. 12, Jaksel">
+            </div>
+            <div>
+              <label for="order-notes">Catatan pesanan (opsional)</label>
+              <textarea class="textarea-field" id="order-notes" placeholder="mis. tidak pakai pedas, tambah 10 pcs tanpa bawang…"></textarea>
+            </div>
+          </div>
+          <div class="lock-note" id="cart-lock-note" hidden>Menu dikunci karena pesanan sudah siap/diantar. Kamu masih bisa mengubah nama, alamat, dan catatan.</div>
+          <div class="cart-list" id="cart-list"></div>
+          <div class="modal-foot">
+            <div class="cart-total-row"><span class="l">Total pesanan</span><span class="v" id="cart-total">Rp0</span></div>
+            <button class="submit-order-btn" id="submit-order" disabled>Kirim ke dapur</button>
+            <div class="modal-msg" id="order-msg"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- READY MODAL (Dapur: tandai siap + lokasi penempatan) -->
+  <div class="modal-overlay" id="ready-modal" hidden>
+    <div class="modal action-modal">
+      <div class="modal-head">
+        <div>
+          <h3>Tandai pesanan siap</h3>
+          <p>Catat di mana pesanan ini diletakkan agar mudah ditemukan kurir.</p>
+        </div>
+        <button class="modal-close" id="close-ready-modal" aria-label="Tutup">✕</button>
+      </div>
+      <div class="modal-body">
+        <div class="action-summary">
+          <div class="aid mono" id="ready-order-id"></div>
+          <div class="acust" id="ready-order-cust"></div>
+        </div>
+        <div class="action-field">
+          <label for="ready-location">Pesanan diletakkan di mana?</label>
+          <input type="text" id="ready-location" placeholder="mis. Rak penyajian A2, dekat pintu dapur">
+        </div>
+      </div>
+      <div class="action-foot">
+        <button class="action-confirm-btn" id="confirm-ready" disabled>Tandai siap & simpan lokasi</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- DELIVER MODAL (Kurir: selesai diantar + foto bukti) -->
+  <div class="modal-overlay" id="deliver-modal" hidden>
+    <div class="modal action-modal">
+      <div class="modal-head">
+        <div>
+          <h3>Konfirmasi pengantaran selesai</h3>
+          <p>Ambil foto bukti barang sampai — jam otomatis tercatat.</p>
+        </div>
+        <button class="modal-close" id="close-deliver-modal" aria-label="Tutup">✕</button>
+      </div>
+      <div class="modal-body">
+        <div class="action-summary">
+          <div class="aid mono" id="deliver-order-id"></div>
+          <div class="acust" id="deliver-order-cust"></div>
+        </div>
+        <div class="action-field">
+          <label>Waktu selesai</label>
+          <div class="time-readout mono" id="deliver-time"></div>
+        </div>
+        <div class="action-field">
+          <label>Foto bukti barang sampai</label>
+          <button type="button" class="photo-capture-btn" id="deliver-photo-btn">📷 Ambil foto</button>
+          <input type="file" accept="image/*" capture="environment" id="deliver-photo-input" style="display:none;">
+          <img class="photo-preview" id="deliver-photo-preview" alt="Foto bukti pengantaran">
+        </div>
+      </div>
+      <div class="action-foot">
+        <button class="action-confirm-btn" id="confirm-deliver" disabled>Konfirmasi selesai</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- PASSWORD MODAL (self-service, semua peran) -->
+  <div class="modal-overlay" id="password-modal" hidden>
+    <div class="modal action-modal">
+      <div class="modal-head">
+        <div>
+          <h3>Ganti password</h3>
+          <p>Berlaku untuk akun yang sedang kamu pakai.</p>
+        </div>
+        <button class="modal-close" id="close-password-modal" aria-label="Tutup">✕</button>
+      </div>
+      <div class="modal-body">
+        <div class="msg err" id="password-msg"></div>
+        <div class="action-field">
+          <label for="pw-old">Password saat ini</label>
+          <input type="password" id="pw-old" autocomplete="current-password">
+        </div>
+        <div class="action-field">
+          <label for="pw-new">Password baru</label>
+          <input type="password" id="pw-new" autocomplete="new-password">
+        </div>
+        <div class="action-field">
+          <label for="pw-confirm">Konfirmasi password baru</label>
+          <input type="password" id="pw-confirm" autocomplete="new-password">
+        </div>
+      </div>
+      <div class="action-foot">
+        <button class="action-confirm-btn" id="confirm-password">Simpan password baru</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ACCOUNTS MODAL (admin mengatur semua password) -->
+  <div class="modal-overlay" id="accounts-modal" hidden>
+    <div class="modal" style="max-width:560px;">
+      <div class="modal-head">
+        <div>
+          <h3>Kelola akun</h3>
+          <p>Tambah akun baru, ganti password, atau hapus akun.</p>
+        </div>
+        <button class="modal-close" id="close-accounts-modal" aria-label="Tutup">✕</button>
+      </div>
+      <div class="modal-body" style="display:block; padding:18px 22px; overflow-y:auto;">
+        <p class="acc-info">Satu akun bisa dipakai login di beberapa HP/komputer sekaligus. Kalau ada 2-3 kurir, buatkan akun kurir masing-masing supaya nama kurir di setiap pesanan jelas.</p>
+        <div class="acc-add">
+          <h4>+ Tambah akun baru</h4>
+          <div class="grid">
+            <div><label for="acc-new-name">Nama lengkap</label><input type="text" id="acc-new-name" placeholder="mis. Rudi Hartono"></div>
+            <div><label for="acc-new-role">Peran</label>
+              <select id="acc-new-role"><option value="kurir">Kurir</option><option value="dapur">Dapur</option><option value="admin">Admin</option></select></div>
+            <div><label for="acc-new-username">Nama pengguna (untuk login)</label><input type="text" id="acc-new-username" placeholder="mis. rudi.kurir" autocapitalize="none" autocomplete="off"></div>
+            <div><label for="acc-new-pass">Password awal (min. 6 karakter)</label><input type="text" id="acc-new-pass" autocomplete="off"></div>
+          </div>
+          <div class="form-actions"><button type="button" class="btn-sm primary" id="acc-add-btn">Tambah akun</button></div>
+          <div class="form-msg" id="acc-add-msg"></div>
+        </div>
+        <div id="accounts-list"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- DETAIL PESANAN (admin) -->
+  <div class="modal-overlay" id="detail-modal" hidden>
+    <div class="modal" style="max-width:720px;">
+      <div class="modal-head">
+        <div><h3 id="detail-title">Detail pesanan</h3><p id="detail-sub"></p></div>
+        <button class="modal-close" id="close-detail-modal" aria-label="Tutup">✕</button>
+      </div>
+      <div class="modal-body detail-body" id="detail-body"></div>
+      <div class="detail-foot" id="detail-foot"></div>
+    </div>
+  </div>
+
+  <!-- KELOLA MENU (admin) -->
+  <div class="modal-overlay" id="menu-admin-modal" hidden>
+    <div class="modal">
+      <div class="modal-head">
+        <div><h3>Kelola menu & harga</h3><p>Ubah harga, tambah menu baru, atau isi komposisi. Perubahan hanya berlaku untuk pesanan baru.</p></div>
+        <button class="modal-close" id="close-menu-admin-modal" aria-label="Tutup">✕</button>
+      </div>
+      <div class="modal-body">
+        <div class="menu-pane">
+          <div class="menu-controls">
+            <input type="text" id="ma-search" placeholder="Cari menu…">
+            <select id="ma-category"></select>
+            <button type="button" class="btn-sm primary" id="ma-new">+ Menu baru</button>
+          </div>
+          <div class="menu-count" id="ma-count"></div>
+          <div class="menu-list" id="ma-list" style="max-height:480px;"></div>
+        </div>
+        <div class="form-pane">
+          <div id="ma-form-title" style="font-weight:700; font-size:14px;">Menu baru</div>
+          <div><label for="ma-nama">Nama menu *</label><input type="text" id="ma-nama" maxlength="200" placeholder="mis. Pisang Goreng Keju"></div>
+          <div class="two">
+            <div><label for="ma-harga">Harga (Rp) *</label><input type="text" inputmode="numeric" id="ma-harga" placeholder="mis. 1500000"><div class="hint-s" id="ma-harga-hint"></div></div>
+            <div><label for="ma-varian">Varian / paket</label><input type="text" id="ma-varian" maxlength="100" placeholder="Paket" value="Paket"></div>
+          </div>
+          <div class="two">
+            <div><label for="ma-kategori">Kategori</label><input type="text" id="ma-kategori" maxlength="100" list="ma-kategori-list" placeholder="pilih / ketik baru"><datalist id="ma-kategori-list"></datalist></div>
+            <div class="two" style="gap:6px;">
+              <div><label for="ma-jumlah">Jumlah</label><input type="text" id="ma-jumlah" maxlength="50" placeholder="50"></div>
+              <div><label for="ma-satuan">Satuan</label><input type="text" id="ma-satuan" maxlength="50" placeholder="PCS"></div>
+            </div>
+          </div>
+          <div><label for="ma-komposisi">Komposisi / detail bahan (satu baris per bahan)</label><textarea id="ma-komposisi" placeholder="mis.&#10;Pisang 50 pcs&#10;Keju parut 1 kg&#10;Tepung 2 kg"></textarea></div>
+          <div class="form-actions">
+            <button type="button" class="btn-sm primary" id="ma-save">Simpan menu</button>
+            <button type="button" class="btn-sm" id="ma-toggle" hidden>Nonaktifkan</button>
+            <button type="button" class="btn-sm danger" id="ma-delete" hidden>Hapus</button>
+          </div>
+          <div class="form-msg" id="ma-msg"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- LAPORAN (admin) -->
+  <div class="modal-overlay" id="report-modal" hidden>
+    <div class="modal" style="max-width:1040px;">
+      <div class="modal-head">
+        <div><h3>Laporan pesanan</h3><p>Rekap penjualan, menu terlaris, dan kebutuhan bahan. Bisa diunduh ke Excel atau Word.</p></div>
+        <button class="modal-close" id="close-report-modal" aria-label="Tutup">✕</button>
+      </div>
+      <div class="modal-body report-body">
+        <div class="quick-range">
+          <button type="button" class="btn-sm" data-range="today">Hari ini</button>
+          <button type="button" class="btn-sm" data-range="7">7 hari terakhir</button>
+          <button type="button" class="btn-sm" data-range="30">30 hari terakhir</button>
+          <button type="button" class="btn-sm" data-range="month">Bulan ini</button>
+          <button type="button" class="btn-sm" data-range="lastmonth">Bulan lalu</button>
+        </div>
+        <div class="report-controls">
+          <div class="fld"><label for="rp-from">Dari tanggal</label><input type="date" id="rp-from"></div>
+          <div class="fld"><label for="rp-to">Sampai tanggal</label><input type="date" id="rp-to"></div>
+          <div class="fld"><label for="rp-group">Kelompokkan</label>
+            <select id="rp-group"><option value="day">Per hari</option><option value="week">Per minggu</option><option value="month">Per bulan</option></select></div>
+          <button type="button" class="btn-sm primary" id="rp-show">Tampilkan</button>
+        </div>
+        <div class="form-msg err" id="rp-msg"></div>
+        <div id="rp-result"></div>
+      </div>
+      <div class="report-foot">
+        <button type="button" class="btn-sm" id="rp-xlsx" disabled>⬇️ Unduh Excel</button>
+        <button type="button" class="btn-sm" id="rp-docx" disabled>⬇️ Unduh Word</button>
+        <button type="button" class="btn-sm" id="rp-print" disabled>🖨️ Cetak</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- PRINT RECAP: Dapur -->
+<div class="print-area" id="print-dapur"></div>
+<!-- PRINT RECAP: Kurir -->
+<div class="print-area" id="print-kurir"></div>
+<!-- PRINT: Admin (nota, daftar pesanan, laporan) -->
+<div class="print-area" id="print-admin"></div>
+
+<script src="app.js"></script>
+</body>
+</html>

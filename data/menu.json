@@ -1,0 +1,1226 @@
+[
+ {
+  "kategori": "Cotton Candy",
+  "nama": "Cotton Candy Character",
+  "varian": "Harga satuan",
+  "harga": 3000000,
+  "jumlah": "50",
+  "satuan": "PCS",
+  "komposisi": "Gula 5 kg\nStick besar\n(patokan untuk 50 pcs)"
+ },
+ {
+  "kategori": "Cotton Candy",
+  "nama": "Cotton Candy Gulungan",
+  "varian": "Harga satuan",
+  "harga": 2000000,
+  "jumlah": "50",
+  "satuan": "PCS",
+  "komposisi": "Gula 5 kg\nStick besar\n(patokan untuk 50 pcs)"
+ },
+ {
+  "kategori": "Cotton Candy Take Away",
+  "nama": "Cotton Candy Cup 400 ML",
+  "varian": "Paket 1",
+  "harga": 1000000,
+  "jumlah": "50",
+  "satuan": "PCS",
+  "komposisi": "Cotton candy cup 400 ml"
+ },
+ {
+  "kategori": "Cotton Candy Take Away",
+  "nama": "Cotton Candy Cup 400 ML",
+  "varian": "Paket 2",
+  "harga": 2000000,
+  "jumlah": "100",
+  "satuan": "PCS",
+  "komposisi": "Cotton candy cup 400 ml"
+ },
+ {
+  "kategori": "Cotton Candy Take Away",
+  "nama": "Cotton Candy Cup 650 ML",
+  "varian": "Paket 1",
+  "harga": 1250000,
+  "jumlah": "50",
+  "satuan": "PCS",
+  "komposisi": "Cotton candy cup 650 ml"
+ },
+ {
+  "kategori": "Cotton Candy Take Away",
+  "nama": "Cotton Candy Cup 650 ML",
+  "varian": "Paket 2",
+  "harga": 2500000,
+  "jumlah": "100",
+  "satuan": "PCS",
+  "komposisi": "Cotton candy cup 650 ml"
+ },
+ {
+  "kategori": "Cotton Candy Take Away",
+  "nama": "Cotton Candy Bucket 1000 ML",
+  "varian": "Paket 1",
+  "harga": 1750000,
+  "jumlah": "50",
+  "satuan": "PCS",
+  "komposisi": "Cotton candy bucket 1000 ml"
+ },
+ {
+  "kategori": "Cotton Candy Take Away",
+  "nama": "Cotton Candy Bucket 1000 ML",
+  "varian": "Paket 2",
+  "harga": 3500000,
+  "jumlah": "100",
+  "satuan": "PCS",
+  "komposisi": "Cotton candy bucket 1000 ml"
+ },
+ {
+  "kategori": "Popcorn",
+  "nama": "Popcorn Butter",
+  "varian": "Paket 1",
+  "harga": 1800000,
+  "jumlah": "50",
+  "satuan": "PORSI",
+  "komposisi": "Biji popcorn 1 kg untuk 20 pax"
+ },
+ {
+  "kategori": "Popcorn",
+  "nama": "Popcorn Butter",
+  "varian": "Paket 2",
+  "harga": 2800000,
+  "jumlah": "100",
+  "satuan": "PORSI",
+  "komposisi": "Biji popcorn 1 kg untuk 20 pax"
+ },
+ {
+  "kategori": "Popcorn",
+  "nama": "Popcorn Premium",
+  "varian": "Paket 1",
+  "harga": 2300000,
+  "jumlah": "50",
+  "satuan": "PORSI",
+  "komposisi": "Flavour: caramel, chocolate, strawberry"
+ },
+ {
+  "kategori": "Popcorn",
+  "nama": "Popcorn Premium",
+  "varian": "Paket 2",
+  "harga": 3300000,
+  "jumlah": "100",
+  "satuan": "PORSI",
+  "komposisi": "Flavour: caramel, chocolate, strawberry"
+ },
+ {
+  "kategori": "Chocolate Fountain",
+  "nama": "Chocolate Fountain",
+  "varian": "Ekonomis",
+  "harga": 1800000,
+  "jumlah": "30-50",
+  "satuan": "TAMU",
+  "komposisi": "Melon 30 pcs; Strawberry 30 pcs; Anggur 30 pcs; Marshmallow 30 pcs; Astor 50 pcs; Tusukan 1 pax; Cokelat Diamond 1 kg; Mesin kecil\nPaket Crazy Deal / Promo: isi sama, cokelat \"Dunia\" 1 kg\nCatatan belanja: marshmallow 1 kg isi 200 pcs"
+ },
+ {
+  "kategori": "Chocolate Fountain",
+  "nama": "Chocolate Fountain",
+  "varian": "Paket 1",
+  "harga": 2800000,
+  "jumlah": "50-100",
+  "satuan": "TAMU",
+  "komposisi": "Melon 50 pcs; Strawberry 50 pcs; Anggur 50 pcs; Marshmallow 100 pcs; Astor 100 pcs; Tusukan 2 pax; Cokelat Diamond 3 kg; Mesin besar\nCatatan belanja: marshmallow 1 kg isi 200 pcs"
+ },
+ {
+  "kategori": "Chocolate Fountain",
+  "nama": "Chocolate Fountain",
+  "varian": "Paket 2",
+  "harga": 3800000,
+  "jumlah": "100-200",
+  "satuan": "TAMU",
+  "komposisi": "Melon 100 pcs; Strawberry 50 pcs; Anggur 50 pcs; Pisang 25 buah; Marshmallow 150 pcs; Astor 100 pcs; Tusukan 2 pax; Rice crispy 100 pcs; Cokelat Diamond 3 kg; Mesin besar\nCatatan belanja: marshmallow 1 kg isi 200 pcs"
+ },
+ {
+  "kategori": "Chocolate Fountain",
+  "nama": "Chocolate Fountain",
+  "varian": "Paket 3",
+  "harga": 5300000,
+  "jumlah": "200-300",
+  "satuan": "TAMU",
+  "komposisi": "Melon 100 pcs; Strawberry 100 pcs; Anggur 100 pcs; Pisang 25 buah; Marshmallow 200 pcs; Astor 200 pcs; Tusukan 3 pax; Rice crispy 150 pcs; Wafer stick Nissin 100 pcs; Cokelat Diamond 4 kg; Mesin besar\nCatatan belanja: marshmallow 1 kg isi 200 pcs"
+ },
+ {
+  "kategori": "Chocolate Fountain",
+  "nama": "Chocolate Fountain",
+  "varian": "Paket 4",
+  "harga": 7800000,
+  "jumlah": "300-400",
+  "satuan": "TAMU",
+  "komposisi": "Melon 200 pcs; Strawberry 200 pcs; Anggur 200 pcs; Pisang 50 buah; Marshmallow 300 pcs; Astor 400 pcs; Tusukan 5 pax; Rice crispy 200 pcs; Wafer stick Nissin 500 pcs; Cokelat Diamond 6 kg; Mesin besar\nCatatan belanja: marshmallow 1 kg isi 200 pcs"
+ },
+ {
+  "kategori": "Lava Choco Take Away",
+  "nama": "Lava Choco Cup",
+  "varian": "Paket",
+  "harga": 350000,
+  "jumlah": "10",
+  "satuan": "TAMU",
+  "komposisi": "Marshmallow rainbow 7 pcs; Marshmallow putih 7 pcs; Strawberry 12 pcs; Anggur 12 pcs; Cokelat 135 gram"
+ },
+ {
+  "kategori": "Lava Choco Take Away",
+  "nama": "Lava Choco Box",
+  "varian": "Paket",
+  "harga": 799000,
+  "jumlah": "20",
+  "satuan": "TAMU",
+  "komposisi": "Strawberry 20 pcs; Anggur 20 pcs; Pisang 20 potong; Melon 20 pcs; Marshmallow pink/putih 20 pcs; Marshmallow warna-warni 20 pcs; Croffle 20 pcs; Nyam Nyam 8 cup; Dipping chocolate: Strawberry 220 gram, Green Tea 220 gram, Choco Crunch 350 gram"
+ },
+ {
+  "kategori": "Waffle Series",
+  "nama": "Waffle",
+  "varian": "Paket 1",
+  "harga": 1500000,
+  "jumlah": "50",
+  "satuan": "PCS",
+  "komposisi": "Topping selai: Cokelat / blueberry / strawberry\nTakaran dapur:\nAdonan 2 L (2,5 kg) per 50 pax\nDetail bahan (Excel):\nSelai Golden Fill rasa cokelat / blueberry / strawberry"
+ },
+ {
+  "kategori": "Waffle Series",
+  "nama": "Waffle",
+  "varian": "Paket 2",
+  "harga": 2500000,
+  "jumlah": "100",
+  "satuan": "PCS",
+  "komposisi": "Topping selai: Cokelat / blueberry / strawberry\nTakaran dapur:\nAdonan 2 L (2,5 kg) per 50 pax\nDetail bahan (Excel):\nSelai Golden Fill rasa cokelat / blueberry / strawberry"
+ },
+ {
+  "kategori": "Waffle Series",
+  "nama": "Croffle",
+  "varian": "Paket 1",
+  "harga": 1500000,
+  "jumlah": "50",
+  "satuan": "PCS",
+  "komposisi": "Topping selai: Cokelat / blueberry / strawberry\nDetail bahan (Excel):\nAdonan croffle\nSelai Golden Fill rasa cokelat / blueberry / strawberry"
+ },
+ {
+  "kategori": "Waffle Series",
+  "nama": "Croffle",
+  "varian": "Paket 2",
+  "harga": 2500000,
+  "jumlah": "100",
+  "satuan": "PCS",
+  "komposisi": "Topping selai: Cokelat / blueberry / strawberry\nDetail bahan (Excel):\nAdonan croffle\nSelai Golden Fill rasa cokelat / blueberry / strawberry"
+ },
+ {
+  "kategori": "Waffle Series",
+  "nama": "Korean Waffle",
+  "varian": "Paket 1",
+  "harga": 1800000,
+  "jumlah": "50",
+  "satuan": "PCS",
+  "komposisi": "Dengan whipped cream; topping buah: Pisang / Anggur / Strawberry / Marshmallow; topping selai: Coklat / Tiramisu / Matcha / Strawberry\nTakaran dapur:\nAdonan 2 L (2,5 kg) per 50 pax\nDetail bahan (Excel):\nWhipped cream\nSelai Golden Fill rasa coklat / tiramisu / matcha / strawberry"
+ },
+ {
+  "kategori": "Waffle Series",
+  "nama": "Korean Waffle",
+  "varian": "Paket 2",
+  "harga": 2800000,
+  "jumlah": "100",
+  "satuan": "PCS",
+  "komposisi": "Dengan whipped cream; topping buah: Pisang / Anggur / Strawberry / Marshmallow; topping selai: Coklat / Tiramisu / Matcha / Strawberry\nTakaran dapur:\nAdonan 2 L (2,5 kg) per 50 pax\nDetail bahan (Excel):\nWhipped cream\nSelai Golden Fill rasa coklat / tiramisu / matcha / strawberry"
+ },
+ {
+  "kategori": "Waffle Series",
+  "nama": "Korean Croffle",
+  "varian": "Paket 1",
+  "harga": 1800000,
+  "jumlah": "50",
+  "satuan": "PCS",
+  "komposisi": "Dengan whipped cream; topping buah: Pisang / Anggur / Strawberry / Marshmallow; topping selai: Coklat / Tiramisu / Matcha / Strawberry\nDetail bahan (Excel):\nWhipped cream\nAdonan croffle\nSelai Golden Fill rasa coklat / tiramisu / matcha / strawberry"
+ },
+ {
+  "kategori": "Waffle Series",
+  "nama": "Korean Croffle",
+  "varian": "Paket 2",
+  "harga": 2800000,
+  "jumlah": "100",
+  "satuan": "PCS",
+  "komposisi": "Dengan whipped cream; topping buah: Pisang / Anggur / Strawberry / Marshmallow; topping selai: Coklat / Tiramisu / Matcha / Strawberry\nDetail bahan (Excel):\nWhipped cream\nAdonan croffle\nSelai Golden Fill rasa coklat / tiramisu / matcha / strawberry"
+ },
+ {
+  "kategori": "Waffle Series",
+  "nama": "Waffle Ice Cream",
+  "varian": "Paket 1",
+  "harga": 2000000,
+  "jumlah": "50",
+  "satuan": "PCS",
+  "komposisi": "Topping selai: Cokelat / strawberry / caramel\nTakaran dapur:\nAdonan 2 L (2,5 kg) per 50 pax\nIce cream 5 liter per 50 pax / 8 liter per 100 pax\nDetail bahan (Excel):\nSelai Golden Fill rasa cokelat / strawberry / caramel"
+ },
+ {
+  "kategori": "Waffle Series",
+  "nama": "Waffle Ice Cream",
+  "varian": "Paket 2",
+  "harga": 3300000,
+  "jumlah": "100",
+  "satuan": "PCS",
+  "komposisi": "Topping selai: Cokelat / strawberry / caramel\nTakaran dapur:\nAdonan 2 L (2,5 kg) per 50 pax\nIce cream 5 liter per 50 pax / 8 liter per 100 pax\nDetail bahan (Excel):\nSelai Golden Fill rasa cokelat / strawberry / caramel"
+ },
+ {
+  "kategori": "Waffle Series",
+  "nama": "Croffle Ice Cream",
+  "varian": "Paket 1",
+  "harga": 2000000,
+  "jumlah": "50",
+  "satuan": "PCS",
+  "komposisi": "Topping selai: Cokelat / strawberry / caramel\nTakaran dapur:\nIce cream 5 liter per 50 pax / 8 liter per 100 pax\nDetail bahan (Excel):\nAdonan croffle\nSelai Golden Fill rasa cokelat / strawberry / caramel"
+ },
+ {
+  "kategori": "Waffle Series",
+  "nama": "Croffle Ice Cream",
+  "varian": "Paket 2",
+  "harga": 3300000,
+  "jumlah": "100",
+  "satuan": "PCS",
+  "komposisi": "Topping selai: Cokelat / strawberry / caramel\nTakaran dapur:\nIce cream 5 liter per 50 pax / 8 liter per 100 pax\nDetail bahan (Excel):\nAdonan croffle\nSelai Golden Fill rasa cokelat / strawberry / caramel"
+ },
+ {
+  "kategori": "Pancake Series",
+  "nama": "Dorayaki Original",
+  "varian": "Paket 1",
+  "harga": 1800000,
+  "jumlah": "50",
+  "satuan": "PCS",
+  "komposisi": "Topping selai: Cokelat / blueberry / strawberry"
+ },
+ {
+  "kategori": "Pancake Series",
+  "nama": "Dorayaki Original",
+  "varian": "Paket 2",
+  "harga": 2800000,
+  "jumlah": "100",
+  "satuan": "PCS",
+  "komposisi": "Topping selai: Cokelat / blueberry / strawberry"
+ },
+ {
+  "kategori": "Pancake Series",
+  "nama": "Dorayaki Cheese",
+  "varian": "Paket 1",
+  "harga": 1800000,
+  "jumlah": "50",
+  "satuan": "PCS",
+  "komposisi": "Cheese"
+ },
+ {
+  "kategori": "Pancake Series",
+  "nama": "Dorayaki Cheese",
+  "varian": "Paket 2",
+  "harga": 2800000,
+  "jumlah": "100",
+  "satuan": "PCS",
+  "komposisi": "Cheese"
+ },
+ {
+  "kategori": "Pancake Series",
+  "nama": "Fish Pancake Original",
+  "varian": "Paket 1",
+  "harga": 1800000,
+  "jumlah": "50",
+  "satuan": "PCS",
+  "komposisi": "Filling: Strawberry / Blueberry / Choco / Matcha / Oreo\nTakaran dapur:\nAdonan 3 L (3,7 kg) per 50 pax\nDetail bahan (Excel):\nFilling: Selai Tulip rasa strawberry / blueberry / choco / matcha / oreo"
+ },
+ {
+  "kategori": "Pancake Series",
+  "nama": "Fish Pancake Original",
+  "varian": "Paket 2",
+  "harga": 2800000,
+  "jumlah": "100",
+  "satuan": "PCS",
+  "komposisi": "Filling: Strawberry / Blueberry / Choco / Matcha / Oreo\nTakaran dapur:\nAdonan 3 L (3,7 kg) per 50 pax\nDetail bahan (Excel):\nFilling: Selai Tulip rasa strawberry / blueberry / choco / matcha / oreo"
+ },
+ {
+  "kategori": "Pancake Series",
+  "nama": "Fish Pancake Mozzarella",
+  "varian": "Paket 1",
+  "harga": 2000000,
+  "jumlah": "50",
+  "satuan": "PCS",
+  "komposisi": "Filling: Strawberry / Blueberry / Choco / Matcha / Oreo\nTakaran dapur:\nAdonan 3 L (3,7 kg) per 50 pax\nMoza 1 potong per pax\nDetail bahan (Excel):\nFilling: Selai Tulip rasa strawberry / blueberry / choco / matcha / oreo"
+ },
+ {
+  "kategori": "Pancake Series",
+  "nama": "Fish Pancake Mozzarella",
+  "varian": "Paket 2",
+  "harga": 3300000,
+  "jumlah": "100",
+  "satuan": "PCS",
+  "komposisi": "Filling: Strawberry / Blueberry / Choco / Matcha / Oreo\nTakaran dapur:\nAdonan 3 L (3,7 kg) per 50 pax\nMoza 1 potong per pax\nDetail bahan (Excel):\nFilling: Selai Tulip rasa strawberry / blueberry / choco / matcha / oreo"
+ },
+ {
+  "kategori": "Pancake Series",
+  "nama": "Coin Pancake Original",
+  "varian": "Paket 1",
+  "harga": 2100000,
+  "jumlah": "50",
+  "satuan": "PCS",
+  "komposisi": "Filling: Mozzarella\nTakaran dapur:\nAdonan 5 L (6,2 kg) per 50 pax\nMoza 1 potong per pax"
+ },
+ {
+  "kategori": "Pancake Series",
+  "nama": "Coin Pancake Original",
+  "varian": "Paket 2",
+  "harga": 3300000,
+  "jumlah": "100",
+  "satuan": "PCS",
+  "komposisi": "Filling: Mozzarella\nTakaran dapur:\nAdonan 5 L (6,2 kg) per 50 pax\nMoza 1 potong per pax"
+ },
+ {
+  "kategori": "Pancake Series",
+  "nama": "Coin Pancake Premium",
+  "varian": "Paket 1",
+  "harga": 2300000,
+  "jumlah": "50",
+  "satuan": "PCS",
+  "komposisi": "Filling: Mozzarella + Strawberry / Blueberry / Choco / Matcha / Oreo\nTakaran dapur:\nAdonan 5 L (6,2 kg) per 50 pax\nMoza 1 potong per pax\nDetail bahan (Excel):\nFilling: Selai Tulip rasa strawberry / blueberry / choco / matcha / oreo"
+ },
+ {
+  "kategori": "Pancake Series",
+  "nama": "Coin Pancake Premium",
+  "varian": "Paket 2",
+  "harga": 3800000,
+  "jumlah": "100",
+  "satuan": "PCS",
+  "komposisi": "Filling: Mozzarella + Strawberry / Blueberry / Choco / Matcha / Oreo\nTakaran dapur:\nAdonan 5 L (6,2 kg) per 50 pax\nMoza 1 potong per pax\nDetail bahan (Excel):\nFilling: Selai Tulip rasa strawberry / blueberry / choco / matcha / oreo"
+ },
+ {
+  "kategori": "Sweet Dessert",
+  "nama": "Ice Cream",
+  "varian": "Paket 1",
+  "harga": 1800000,
+  "jumlah": "50",
+  "satuan": "PCS",
+  "komposisi": "Flavour ice: Mix Vanilla, Chocolate & Strawberry\nTakaran dapur:\nIce cream 5 liter per 50 pax / 8 liter per 100 pax\nPelengkap: Astor, Mesis, Rodeo"
+ },
+ {
+  "kategori": "Sweet Dessert",
+  "nama": "Ice Cream",
+  "varian": "Paket 2",
+  "harga": 2800000,
+  "jumlah": "100",
+  "satuan": "PCS",
+  "komposisi": "Flavour ice: Mix Vanilla, Chocolate & Strawberry\nTakaran dapur:\nIce cream 5 liter per 50 pax / 8 liter per 100 pax\nPelengkap: Astor, Mesis, Rodeo"
+ },
+ {
+  "kategori": "Sweet Dessert",
+  "nama": "Ice Cream Brownies",
+  "varian": "Paket 1",
+  "harga": 2000000,
+  "jumlah": "50",
+  "satuan": "PCS",
+  "komposisi": "Ice cream 5 liter per 50 pax / 8 liter per 100 pax\nPelengkap: Astor, Mesis, Rodeo\nBrownies"
+ },
+ {
+  "kategori": "Sweet Dessert",
+  "nama": "Ice Cream Brownies",
+  "varian": "Paket 2",
+  "harga": 3300000,
+  "jumlah": "100",
+  "satuan": "PCS",
+  "komposisi": "Ice cream 5 liter per 50 pax / 8 liter per 100 pax\nPelengkap: Astor, Mesis, Rodeo\nBrownies"
+ },
+ {
+  "kategori": "Sweet Dessert",
+  "nama": "Ice Cream Cotton Candy",
+  "varian": "Paket 1",
+  "harga": 2000000,
+  "jumlah": "50",
+  "satuan": "PCS",
+  "komposisi": "Ice cream 5 liter per 50 pax / 8 liter per 100 pax\nPelengkap: Astor, Mesis, Rodeo\nCotton candy cup 650 ml untuk 2 pax"
+ },
+ {
+  "kategori": "Sweet Dessert",
+  "nama": "Ice Cream Cotton Candy",
+  "varian": "Paket 2",
+  "harga": 3300000,
+  "jumlah": "100",
+  "satuan": "PCS",
+  "komposisi": "Ice cream 5 liter per 50 pax / 8 liter per 100 pax\nPelengkap: Astor, Mesis, Rodeo\nCotton candy cup 650 ml untuk 2 pax"
+ },
+ {
+  "kategori": "Sweet Dessert",
+  "nama": "Strawberry Choco",
+  "varian": "Paket 1",
+  "harga": 2800000,
+  "jumlah": "50",
+  "satuan": "PAX",
+  "komposisi": "Strawberry + choco"
+ },
+ {
+  "kategori": "Sweet Dessert",
+  "nama": "Strawberry Choco",
+  "varian": "Paket 2",
+  "harga": 4300000,
+  "jumlah": "100",
+  "satuan": "PAX",
+  "komposisi": "Strawberry + choco"
+ },
+ {
+  "kategori": "Sweet Dessert",
+  "nama": "Pistachio Dubai Strawberry Choco",
+  "varian": "Paket 1",
+  "harga": 3800000,
+  "jumlah": "50",
+  "satuan": "PAX",
+  "komposisi": "Pistachio Dubai + strawberry choco"
+ },
+ {
+  "kategori": "Sweet Dessert",
+  "nama": "Pistachio Dubai Strawberry Choco",
+  "varian": "Paket 2",
+  "harga": 6300000,
+  "jumlah": "100",
+  "satuan": "PAX",
+  "komposisi": "Pistachio Dubai + strawberry choco"
+ },
+ {
+  "kategori": "Sweet Dessert",
+  "nama": "Dubai Chewy Cookie Strawberry Choco",
+  "varian": "Paket 1",
+  "harga": 4800000,
+  "jumlah": "50",
+  "satuan": "PAX",
+  "komposisi": "Dubai chewy cookie + strawberry choco"
+ },
+ {
+  "kategori": "Sweet Dessert",
+  "nama": "Dubai Chewy Cookie Strawberry Choco",
+  "varian": "Paket 2",
+  "harga": 8300000,
+  "jumlah": "100",
+  "satuan": "PAX",
+  "komposisi": "Dubai chewy cookie + strawberry choco"
+ },
+ {
+  "kategori": "Sweet Dessert",
+  "nama": "Donat",
+  "varian": "Paket 1",
+  "harga": 1500000,
+  "jumlah": "50",
+  "satuan": "PCS",
+  "komposisi": "Dari vendor"
+ },
+ {
+  "kategori": "Sweet Dessert",
+  "nama": "Donat",
+  "varian": "Paket 2",
+  "harga": 2500000,
+  "jumlah": "100",
+  "satuan": "PCS",
+  "komposisi": "Dari vendor"
+ },
+ {
+  "kategori": "Sweet Dessert",
+  "nama": "Mochi",
+  "varian": "Paket 1",
+  "harga": 1800000,
+  "jumlah": "50",
+  "satuan": "PCS",
+  "komposisi": "Dari vendor"
+ },
+ {
+  "kategori": "Sweet Dessert",
+  "nama": "Mochi",
+  "varian": "Paket 2",
+  "harga": 2800000,
+  "jumlah": "100",
+  "satuan": "PCS",
+  "komposisi": "Dari vendor"
+ },
+ {
+  "kategori": "Sweet Dessert",
+  "nama": "Silky Pudding",
+  "varian": "Paket 1",
+  "harga": 1800000,
+  "jumlah": "50",
+  "satuan": "PCS",
+  "komposisi": "Bubuk puding (sesuai rasa)"
+ },
+ {
+  "kategori": "Sweet Dessert",
+  "nama": "Silky Pudding",
+  "varian": "Paket 2",
+  "harga": 2800000,
+  "jumlah": "100",
+  "satuan": "PCS",
+  "komposisi": "Bubuk puding (sesuai rasa)"
+ },
+ {
+  "kategori": "Sweet Dessert",
+  "nama": "Cupcake",
+  "varian": "Paket 1",
+  "harga": 2300000,
+  "jumlah": "50",
+  "satuan": "PCS",
+  "komposisi": "Free custom tema\nDetail bahan (Excel):\n1 pax dari vendor"
+ },
+ {
+  "kategori": "Sweet Dessert",
+  "nama": "Cupcake",
+  "varian": "Paket 2",
+  "harga": 3300000,
+  "jumlah": "100",
+  "satuan": "PCS",
+  "komposisi": "Free custom tema\nDetail bahan (Excel):\n1 pax dari vendor"
+ },
+ {
+  "kategori": "Sweet Dessert",
+  "nama": "Tiramisu",
+  "varian": "Paket 1",
+  "harga": 2300000,
+  "jumlah": "50",
+  "satuan": "PCS",
+  "komposisi": "1 pax dari vendor"
+ },
+ {
+  "kategori": "Sweet Dessert",
+  "nama": "Tiramisu",
+  "varian": "Paket 2",
+  "harga": 3300000,
+  "jumlah": "100",
+  "satuan": "PCS",
+  "komposisi": "1 pax dari vendor"
+ },
+ {
+  "kategori": "Sweet Dessert",
+  "nama": "Burn Cheese Cake",
+  "varian": "Paket 1",
+  "harga": 2500000,
+  "jumlah": "50",
+  "satuan": "PCS",
+  "komposisi": "1 pax dari vendor"
+ },
+ {
+  "kategori": "Sweet Dessert",
+  "nama": "Burn Cheese Cake",
+  "varian": "Paket 2",
+  "harga": 4000000,
+  "jumlah": "100",
+  "satuan": "PCS",
+  "komposisi": "1 pax dari vendor"
+ },
+ {
+  "kategori": "Savory Snack",
+  "nama": "Lasagna",
+  "varian": "Paket 1",
+  "harga": 2000000,
+  "jumlah": "50",
+  "satuan": "PCS",
+  "komposisi": "Lasagna 1 per pax"
+ },
+ {
+  "kategori": "Savory Snack",
+  "nama": "Lasagna",
+  "varian": "Paket 2",
+  "harga": 3000000,
+  "jumlah": "100",
+  "satuan": "PCS",
+  "komposisi": "Lasagna 1 per pax"
+ },
+ {
+  "kategori": "Savory Snack",
+  "nama": "Mac N Cheese",
+  "varian": "Paket 1",
+  "harga": 2000000,
+  "jumlah": "50",
+  "satuan": "PCS",
+  "komposisi": "Mac n cheese 1 per pax"
+ },
+ {
+  "kategori": "Savory Snack",
+  "nama": "Mac N Cheese",
+  "varian": "Paket 2",
+  "harga": 3000000,
+  "jumlah": "100",
+  "satuan": "PCS",
+  "komposisi": "Mac n cheese 1 per pax"
+ },
+ {
+  "kategori": "Savory Snack",
+  "nama": "Spaghetti Brulee",
+  "varian": "Paket 1",
+  "harga": 2000000,
+  "jumlah": "50",
+  "satuan": "PCS",
+  "komposisi": "Spaghetti brulee 1 per pax"
+ },
+ {
+  "kategori": "Savory Snack",
+  "nama": "Spaghetti Brulee",
+  "varian": "Paket 2",
+  "harga": 3000000,
+  "jumlah": "100",
+  "satuan": "PCS",
+  "komposisi": "Spaghetti brulee 1 per pax"
+ },
+ {
+  "kategori": "Savory Snack",
+  "nama": "Dimsum Original",
+  "varian": "Paket 1",
+  "harga": 1800000,
+  "jumlah": "100",
+  "satuan": "PCS",
+  "komposisi": "Dimsum 2 pcs per pax\nSaos hot 1 per 100 pax"
+ },
+ {
+  "kategori": "Savory Snack",
+  "nama": "Dimsum Original",
+  "varian": "Paket 2",
+  "harga": 2800000,
+  "jumlah": "200",
+  "satuan": "PCS",
+  "komposisi": "Dimsum 2 pcs per pax\nSaos hot 1 per 100 pax"
+ },
+ {
+  "kategori": "Savory Snack",
+  "nama": "Dimsum Moza",
+  "varian": "Paket 1",
+  "harga": 2300000,
+  "jumlah": "100",
+  "satuan": "PCS",
+  "komposisi": "Dimsum 2 pcs per pax\nMoza 1 potong"
+ },
+ {
+  "kategori": "Savory Snack",
+  "nama": "Dimsum Moza",
+  "varian": "Paket 2",
+  "harga": 3300000,
+  "jumlah": "200",
+  "satuan": "PCS",
+  "komposisi": "Dimsum 2 pcs per pax\nMoza 1 potong"
+ },
+ {
+  "kategori": "Savory Snack",
+  "nama": "Dimsum Mentai",
+  "varian": "Paket 1",
+  "harga": 2300000,
+  "jumlah": "100",
+  "satuan": "PCS",
+  "komposisi": "Dimsum 2 pcs per pax\nMentai 1 kg per 50 pax"
+ },
+ {
+  "kategori": "Savory Snack",
+  "nama": "Dimsum Mentai",
+  "varian": "Paket 2",
+  "harga": 3300000,
+  "jumlah": "200",
+  "satuan": "PCS",
+  "komposisi": "Dimsum 2 pcs per pax\nMentai 1 kg per 50 pax"
+ },
+ {
+  "kategori": "Savory Snack",
+  "nama": "Nachos Bolognese",
+  "varian": "Paket 1",
+  "harga": 1800000,
+  "jumlah": "50",
+  "satuan": "PCS",
+  "komposisi": "Tidak dicantumkan pada price list"
+ },
+ {
+  "kategori": "Savory Snack",
+  "nama": "Nachos Bolognese",
+  "varian": "Paket 2",
+  "harga": 2800000,
+  "jumlah": "100",
+  "satuan": "PCS",
+  "komposisi": "Tidak dicantumkan pada price list"
+ },
+ {
+  "kategori": "Savory Snack",
+  "nama": "Jasuke",
+  "varian": "Paket 1",
+  "harga": 1800000,
+  "jumlah": "50",
+  "satuan": "PCS",
+  "komposisi": "Tidak dicantumkan pada price list"
+ },
+ {
+  "kategori": "Savory Snack",
+  "nama": "Jasuke",
+  "varian": "Paket 2",
+  "harga": 2800000,
+  "jumlah": "100",
+  "satuan": "PCS",
+  "komposisi": "Tidak dicantumkan pada price list"
+ },
+ {
+  "kategori": "Savory Snack",
+  "nama": "Sistagor",
+  "varian": "Paket 1",
+  "harga": 1800000,
+  "jumlah": "50",
+  "satuan": "PCS",
+  "komposisi": "Tidak dicantumkan pada price list"
+ },
+ {
+  "kategori": "Savory Snack",
+  "nama": "Sistagor",
+  "varian": "Paket 2",
+  "harga": 2800000,
+  "jumlah": "100",
+  "satuan": "PCS",
+  "komposisi": "Tidak dicantumkan pada price list"
+ },
+ {
+  "kategori": "Savory Snack",
+  "nama": "Street Sushi",
+  "varian": "Paket 1",
+  "harga": 1800000,
+  "jumlah": "100",
+  "satuan": "PCS",
+  "komposisi": "Tidak dicantumkan pada price list"
+ },
+ {
+  "kategori": "Savory Snack",
+  "nama": "Street Sushi",
+  "varian": "Paket 2",
+  "harga": 2800000,
+  "jumlah": "200",
+  "satuan": "PCS",
+  "komposisi": "Tidak dicantumkan pada price list"
+ },
+ {
+  "kategori": "Savory Snack",
+  "nama": "Siomay",
+  "varian": "Paket 1",
+  "harga": 1800000,
+  "jumlah": "100",
+  "satuan": "PCS",
+  "komposisi": "Siomay 2 pcs per pax\nKecap 1 pcs per 100 pax\nSaos hot 1 pcs per 100 pax"
+ },
+ {
+  "kategori": "Savory Snack",
+  "nama": "Siomay",
+  "varian": "Paket 2",
+  "harga": 2800000,
+  "jumlah": "200",
+  "satuan": "PCS",
+  "komposisi": "Siomay 2 pcs per pax\nKecap 1 pcs per 100 pax\nSaos hot 1 pcs per 100 pax"
+ },
+ {
+  "kategori": "Savory Snack",
+  "nama": "Pempek",
+  "varian": "Paket 1",
+  "harga": 1800000,
+  "jumlah": "100",
+  "satuan": "PCS",
+  "komposisi": "Pempek 2 pcs per pax\nCuko 1 botol (1 liter) per 100 pax\nMinyak 2 liter"
+ },
+ {
+  "kategori": "Savory Snack",
+  "nama": "Pempek",
+  "varian": "Paket 2",
+  "harga": 2800000,
+  "jumlah": "200",
+  "satuan": "PCS",
+  "komposisi": "Pempek 2 pcs per pax\nCuko 1 botol (1 liter) per 100 pax\nMinyak 2 liter"
+ },
+ {
+  "kategori": "Jajanan Pasar",
+  "nama": "Paket 1",
+  "varian": "Paket",
+  "harga": 1200000,
+  "jumlah": "100",
+  "satuan": "PCS",
+  "komposisi": "Paket pilihan jajanan pasar; daftar pilihan tersedia pada price list"
+ },
+ {
+  "kategori": "Jajanan Pasar",
+  "nama": "Paket 2",
+  "varian": "Paket",
+  "harga": 2000000,
+  "jumlah": "200",
+  "satuan": "PORSI",
+  "komposisi": "Paket pilihan jajanan pasar; daftar pilihan tersedia pada price list"
+ },
+ {
+  "kategori": "Drink Corner",
+  "nama": "Fresh Drink",
+  "varian": "Paket 1",
+  "harga": 1200000,
+  "jumlah": "50",
+  "satuan": "PORSI",
+  "komposisi": "Pilihan: Lemon Tea, Grass Tea, Lychee Tea, Peach Tea, Mango Tea, Apple Tea, Red Velvet Latte, Taro Latte, Chocolate\nTakaran dapur:\nBubuk minuman 1 kg untuk 20 pax"
+ },
+ {
+  "kategori": "Drink Corner",
+  "nama": "Fresh Drink",
+  "varian": "Paket 2",
+  "harga": 2200000,
+  "jumlah": "100",
+  "satuan": "PORSI",
+  "komposisi": "Pilihan: Lemon Tea, Grass Tea, Lychee Tea, Peach Tea, Mango Tea, Apple Tea, Red Velvet Latte, Taro Latte, Chocolate\nTakaran dapur:\nBubuk minuman 1 kg untuk 20 pax"
+ },
+ {
+  "kategori": "Drink Corner",
+  "nama": "Slushy Drink Juice",
+  "varian": "Paket 1",
+  "harga": 2900000,
+  "jumlah": "100",
+  "satuan": "PORSI",
+  "komposisi": "Pilihan: Orange Juice, Guava Juice, Strawberry Juice, Apple Juice, Mango Juice, Melon Juice, Watermelon Juice, Lychee Juice, Chocolate\nTakaran dapur:\nJuice 10 liter per 50 pax"
+ },
+ {
+  "kategori": "Drink Corner",
+  "nama": "Slushy Drink Juice",
+  "varian": "Paket 2",
+  "harga": 4000000,
+  "jumlah": "200",
+  "satuan": "PORSI",
+  "komposisi": "Pilihan: Orange Juice, Guava Juice, Strawberry Juice, Apple Juice, Mango Juice, Melon Juice, Watermelon Juice, Lychee Juice, Chocolate\nTakaran dapur:\nJuice 10 liter per 50 pax"
+ },
+ {
+  "kategori": "Drink Corner",
+  "nama": "Barista Grade",
+  "varian": "Paket 1",
+  "harga": 2000000,
+  "jumlah": "50",
+  "satuan": "PORSI",
+  "komposisi": "Ice Kopi Gula Aren; Ice Chocolate; Ice Matcha\nTakaran dapur:\n1 pax = 150 ml"
+ },
+ {
+  "kategori": "Drink Corner",
+  "nama": "Barista Grade",
+  "varian": "Paket 2",
+  "harga": 3500000,
+  "jumlah": "100",
+  "satuan": "PORSI",
+  "komposisi": "Ice Kopi Gula Aren; Ice Chocolate; Ice Matcha\nTakaran dapur:\n1 pax = 150 ml"
+ },
+ {
+  "kategori": "Drink Corner",
+  "nama": "Slushy Drink Barista Grade",
+  "varian": "Paket 1",
+  "harga": 3900000,
+  "jumlah": "100",
+  "satuan": "PORSI",
+  "komposisi": "Coffee; Chocolate; Matcha"
+ },
+ {
+  "kategori": "Drink Corner",
+  "nama": "Slushy Drink Barista Grade",
+  "varian": "Paket 2",
+  "harga": 6000000,
+  "jumlah": "200",
+  "satuan": "PORSI",
+  "komposisi": "Coffee; Chocolate; Matcha"
+ },
+ {
+  "kategori": "Snack Box",
+  "nama": "Snack Box Ekonomis",
+  "varian": "Harga satuan",
+  "harga": 29000,
+  "jumlah": "1",
+  "satuan": "BOX",
+  "komposisi": "1 box: 2 pilihan asin + 2 pilihan manis + mineral water; min. 20 box"
+ },
+ {
+  "kategori": "Snack Box",
+  "nama": "Snack Box Sultan",
+  "varian": "Harga satuan",
+  "harga": 45000,
+  "jumlah": "1",
+  "satuan": "BOX",
+  "komposisi": "1 box: 2 pilihan asin + 1 pilihan manis + mineral water; min. 20 box"
+ },
+ {
+  "kategori": "Indomie Party",
+  "nama": "Ekonomis",
+  "varian": "Paket 1",
+  "harga": 1800000,
+  "jumlah": "50",
+  "satuan": "PORSI",
+  "komposisi": "Mie setengah porsi; telur rebus setengah; saus; sambal"
+ },
+ {
+  "kategori": "Indomie Party",
+  "nama": "Ekonomis",
+  "varian": "Paket 2",
+  "harga": 2800000,
+  "jumlah": "100",
+  "satuan": "PORSI",
+  "komposisi": "Mie setengah porsi; telur rebus setengah; saus; sambal"
+ },
+ {
+  "kategori": "Indomie Party",
+  "nama": "Merakyat",
+  "varian": "Paket 1",
+  "harga": 2300000,
+  "jumlah": "50",
+  "satuan": "PORSI",
+  "komposisi": "Mie satu porsi; sayuran; cabai; telur rebus\nTakaran dapur:\nSawi 1 ikat per 50 pax\nCabe Rp5.000 per 100 pax"
+ },
+ {
+  "kategori": "Indomie Party",
+  "nama": "Merakyat",
+  "varian": "Paket 2",
+  "harga": 3800000,
+  "jumlah": "100",
+  "satuan": "PORSI",
+  "komposisi": "Mie satu porsi; sayuran; cabai; telur rebus\nTakaran dapur:\nSawi 1 ikat per 50 pax\nCabe Rp5.000 per 100 pax"
+ },
+ {
+  "kategori": "Indomie Party",
+  "nama": "Juragan",
+  "varian": "Paket 1",
+  "harga": 2800000,
+  "jumlah": "50",
+  "satuan": "PORSI",
+  "komposisi": "Mie satu porsi; sayuran; cabai; telur ceplok; kerupuk; sosis & bakso\nTakaran dapur:\nSosis 1/2 pcs per pax\nBakso 1/2 pcs per pax\nMinyak gelas 2 gelas per 50 pax\nSawi 1 ikat per 50 pax\nCabe Rp5.000 per 100 pax"
+ },
+ {
+  "kategori": "Indomie Party",
+  "nama": "Juragan",
+  "varian": "Paket 2",
+  "harga": 4800000,
+  "jumlah": "100",
+  "satuan": "PORSI",
+  "komposisi": "Mie satu porsi; sayuran; cabai; telur ceplok; kerupuk; sosis & bakso\nTakaran dapur:\nSosis 1/2 pcs per pax\nBakso 1/2 pcs per pax\nMinyak gelas 2 gelas per 50 pax\nSawi 1 ikat per 50 pax\nCabe Rp5.000 per 100 pax"
+ },
+ {
+  "kategori": "Indomie Party",
+  "nama": "Sultan",
+  "varian": "Paket 1",
+  "harga": 3800000,
+  "jumlah": "50",
+  "satuan": "PORSI",
+  "komposisi": "Mie satu porsi; sayuran; cabai; telur ceplok; kerupuk; keju; saikoro beef/sliced beef\nTakaran dapur:\nSaikoro 2 pcs per pax\nMinyak gelas 2 gelas per 50 pax\nSawi 1 ikat per 50 pax\nCabe Rp5.000 per 100 pax\nDetail bahan (Excel):\nKeju parut\nSaus yakiniku"
+ },
+ {
+  "kategori": "Indomie Party",
+  "nama": "Sultan",
+  "varian": "Paket 2",
+  "harga": 6500000,
+  "jumlah": "100",
+  "satuan": "PORSI",
+  "komposisi": "Mie satu porsi; sayuran; cabai; telur ceplok; kerupuk; keju; saikoro beef/sliced beef\nTakaran dapur:\nSaikoro 2 pcs per pax\nMinyak gelas 2 gelas per 50 pax\nSawi 1 ikat per 50 pax\nCabe Rp5.000 per 100 pax\nDetail bahan (Excel):\nKeju parut\nSaus yakiniku"
+ },
+ {
+  "kategori": "Angkringan Party",
+  "nama": "Paket Nasi Kucing",
+  "varian": "Paket",
+  "harga": 2300000,
+  "jumlah": "50",
+  "satuan": "PORSI",
+  "komposisi": "1 porsi: nasi + 2 sate premium + 1 sate favorit + tahu/tempe; sate premium: usus, kikil, telur puyuh, hati ayam, ampela, tetelan sapi; sate favorit: sosis, bakso sapi, bakso udang, bakso salmon, bakso ikan, chikuwa, crabstick, fishroll\nDetail bahan (Excel):\nSambal terasi\nDaftar belanja angkringan (catatan di Excel; jumlah porsi acuannya tidak dicantumkan):\nTeri jengki 100 g; Cumi asin 1 kg; Tempe 4 papan besar; Tahu putih kotak kecil Rp15.000; Kulit ayam 500 g; Usus ayam 250 g; Telur puyuh 1 kg; Ati ayam 250 g; Ampela 250 g; Sandung lamur 250 g; Kikil 250 g; Bawang merah 1,5 kg; Bawang putih 1 kg; Cabe merah keriting 1 kg; Cabe setan / rawit merah 1 kg; Tomat merah 1 kg; Terasi ABC 1 renceng; Gula merah 1 kg; Kemiri 300 g; Ketumbar bubuk Rp5.000; Air kelapa; Bumbu dapur (lengkuas, kunyit, jahe, daun jeruk, daun salam) Rp10.000; Sereh Rp5.000; Kertas nasi"
+ },
+ {
+  "kategori": "Angkringan Party",
+  "nama": "Paket Nasi Bakar Merakyat",
+  "varian": "Paket",
+  "harga": 3300000,
+  "jumlah": "50",
+  "satuan": "PORSI",
+  "komposisi": "1 porsi: nasi + 2 sate premium + 2 sate favorit + tahu, tempe; nasi bakar: ayam, cumi & teri; sate premium: usus, kikil, telur puyuh, hati ayam, ampela, tetelan sapi; sate favorit: sosis, bakso sapi, bakso udang, bakso salmon, bakso ikan, chikuwa, crabstick, fishroll\nDetail bahan (Excel):\nNasi bakar pedas / tidak pedas\nSambal terasi\nDaftar belanja angkringan (catatan di Excel; jumlah porsi acuannya tidak dicantumkan):\nTeri jengki 100 g; Cumi asin 1 kg; Tempe 4 papan besar; Tahu putih kotak kecil Rp15.000; Kulit ayam 500 g; Usus ayam 250 g; Telur puyuh 1 kg; Ati ayam 250 g; Ampela 250 g; Sandung lamur 250 g; Kikil 250 g; Bawang merah 1,5 kg; Bawang putih 1 kg; Cabe merah keriting 1 kg; Cabe setan / rawit merah 1 kg; Tomat merah 1 kg; Terasi ABC 1 renceng; Gula merah 1 kg; Kemiri 300 g; Ketumbar bubuk Rp5.000; Air kelapa; Bumbu dapur (lengkuas, kunyit, jahe, daun jeruk, daun salam) Rp10.000; Sereh Rp5.000; Kertas nasi"
+ },
+ {
+  "kategori": "Angkringan Party",
+  "nama": "Paket Nasi Bakar Sultan",
+  "varian": "Paket",
+  "harga": 4300000,
+  "jumlah": "50",
+  "satuan": "PORSI",
+  "komposisi": "1 porsi: nasi + 2 sate premium + 2 sate favorit + 2 sate saikoro beef + tahu, tempe; nasi bakar: ayam, cumi & teri; sate premium: usus, kikil, telur puyuh, hati ayam, ampela, tetelan sapi; sate saikoro; sate favorit: sosis, bakso sapi, bakso udang, bakso salmon, bakso ikan, chikuwa, crabstick, fishroll; free wedang jahe\nDetail bahan (Excel):\nNasi bakar pedas / tidak pedas\nSambal terasi\nDaftar belanja angkringan (catatan di Excel; jumlah porsi acuannya tidak dicantumkan):\nTeri jengki 100 g; Cumi asin 1 kg; Tempe 4 papan besar; Tahu putih kotak kecil Rp15.000; Kulit ayam 500 g; Usus ayam 250 g; Telur puyuh 1 kg; Ati ayam 250 g; Ampela 250 g; Sandung lamur 250 g; Kikil 250 g; Bawang merah 1,5 kg; Bawang putih 1 kg; Cabe merah keriting 1 kg; Cabe setan / rawit merah 1 kg; Tomat merah 1 kg; Terasi ABC 1 renceng; Gula merah 1 kg; Kemiri 300 g; Ketumbar bubuk Rp5.000; Air kelapa; Bumbu dapur (lengkuas, kunyit, jahe, daun jeruk, daun salam) Rp10.000; Sereh Rp5.000; Kertas nasi"
+ },
+ {
+  "kategori": "BBQ Party",
+  "nama": "Paket Ekonomis",
+  "varian": "Paket",
+  "harga": 2300000,
+  "jumlah": "50",
+  "satuan": "PORSI",
+  "komposisi": "50 pcs sate saikoro; 50 pcs sate chicken yakitori; 50 pcs sate beef enoki; 50 pcs sosis bakar; 50 pcs bakso bakar; total sate 250 pcs"
+ },
+ {
+  "kategori": "BBQ Party",
+  "nama": "Paket Juragan",
+  "varian": "Paket",
+  "harga": 3300000,
+  "jumlah": "50",
+  "satuan": "PORSI",
+  "komposisi": "100 pcs sate saikoro; 100 pcs sate chicken yakitori; 50 pcs sate beef enoki; 50 pcs sosis bakar; 50 pcs bakso bakar; 50 pcs fish roll; total sate 400 pcs"
+ },
+ {
+  "kategori": "BBQ Party",
+  "nama": "Paket Sultan",
+  "varian": "Paket",
+  "harga": 4300000,
+  "jumlah": "50",
+  "satuan": "PORSI",
+  "komposisi": "100 pcs sate saikoro; 100 pcs sate chicken yakitori; 100 pcs sate beef enoki; 100 pcs sosis bakar; 50 pcs bakso bakar; 50 pcs bakso salmon; 50 pcs bakso udang; 50 pcs fish roll; 50 pcs chikuwa; 50 pcs crab stick; total sate 700 pcs"
+ },
+ {
+  "kategori": "Menu Lainnya",
+  "nama": "Sate Ayam + Lontong",
+  "varian": "Paket 1",
+  "harga": 2800000,
+  "jumlah": "50",
+  "satuan": "PORSI",
+  "komposisi": "5 tusuk/porsi\nDetail bahan (Excel):\n1 pax dari vendor"
+ },
+ {
+  "kategori": "Menu Lainnya",
+  "nama": "Sate Ayam + Lontong",
+  "varian": "Paket 2",
+  "harga": 5300000,
+  "jumlah": "100",
+  "satuan": "PORSI",
+  "komposisi": "5 tusuk/porsi\nDetail bahan (Excel):\n1 pax dari vendor"
+ },
+ {
+  "kategori": "Menu Lainnya",
+  "nama": "Bakso Malang",
+  "varian": "Paket 1",
+  "harga": 2800000,
+  "jumlah": "50",
+  "satuan": "PORSI",
+  "komposisi": "1 pax dari vendor"
+ },
+ {
+  "kategori": "Menu Lainnya",
+  "nama": "Bakso Malang",
+  "varian": "Paket 2",
+  "harga": 5300000,
+  "jumlah": "100",
+  "satuan": "PORSI",
+  "komposisi": "1 pax dari vendor"
+ },
+ {
+  "kategori": "Menu Lainnya",
+  "nama": "Soto Ayam + Bihun/Mie Kuning",
+  "varian": "Paket 1",
+  "harga": 2800000,
+  "jumlah": "50",
+  "satuan": "PORSI",
+  "komposisi": "1 pax dari vendor"
+ },
+ {
+  "kategori": "Menu Lainnya",
+  "nama": "Soto Ayam + Bihun/Mie Kuning",
+  "varian": "Paket 2",
+  "harga": 5300000,
+  "jumlah": "100",
+  "satuan": "PORSI",
+  "komposisi": "1 pax dari vendor"
+ },
+ {
+  "kategori": "Menu Lainnya",
+  "nama": "Lontong Opor Ayam",
+  "varian": "Paket 1",
+  "harga": 2800000,
+  "jumlah": "50",
+  "satuan": "PORSI",
+  "komposisi": "1 pax dari vendor"
+ },
+ {
+  "kategori": "Menu Lainnya",
+  "nama": "Lontong Opor Ayam",
+  "varian": "Paket 2",
+  "harga": 5300000,
+  "jumlah": "100",
+  "satuan": "PORSI",
+  "komposisi": "1 pax dari vendor"
+ },
+ {
+  "kategori": "Menu Lainnya",
+  "nama": "Nasi Soto Betawi",
+  "varian": "Paket 1",
+  "harga": 3300000,
+  "jumlah": "50",
+  "satuan": "PORSI",
+  "komposisi": "1 pax dari vendor"
+ },
+ {
+  "kategori": "Menu Lainnya",
+  "nama": "Nasi Soto Betawi",
+  "varian": "Paket 2",
+  "harga": 6000000,
+  "jumlah": "100",
+  "satuan": "PORSI",
+  "komposisi": "1 pax dari vendor"
+ },
+ {
+  "kategori": "Menu Lainnya",
+  "nama": "Nasi Rendang",
+  "varian": "Paket 1",
+  "harga": 3300000,
+  "jumlah": "50",
+  "satuan": "PORSI",
+  "komposisi": "1 pax dari vendor"
+ },
+ {
+  "kategori": "Menu Lainnya",
+  "nama": "Nasi Rendang",
+  "varian": "Paket 2",
+  "harga": 6000000,
+  "jumlah": "100",
+  "satuan": "PORSI",
+  "komposisi": "1 pax dari vendor"
+ },
+ {
+  "kategori": "Menu Lainnya",
+  "nama": "Nasi Uduk + Semur",
+  "varian": "Paket 1",
+  "harga": 3300000,
+  "jumlah": "50",
+  "satuan": "PORSI",
+  "komposisi": "1 pax dari vendor"
+ },
+ {
+  "kategori": "Menu Lainnya",
+  "nama": "Nasi Uduk + Semur",
+  "varian": "Paket 2",
+  "harga": 6000000,
+  "jumlah": "100",
+  "satuan": "PORSI",
+  "komposisi": "1 pax dari vendor"
+ },
+ {
+  "kategori": "Menu Lainnya",
+  "nama": "Nasi Kuning Ayam Goreng",
+  "varian": "Paket 1",
+  "harga": 3300000,
+  "jumlah": "50",
+  "satuan": "PORSI",
+  "komposisi": "1 pax dari vendor"
+ },
+ {
+  "kategori": "Menu Lainnya",
+  "nama": "Nasi Kuning Ayam Goreng",
+  "varian": "Paket 2",
+  "harga": 6000000,
+  "jumlah": "100",
+  "satuan": "PORSI",
+  "komposisi": "1 pax dari vendor"
+ },
+ {
+  "kategori": "Paket Hemat Bundling",
+  "nama": "Cotton Candy Ekonomis",
+  "varian": "Paket",
+  "harga": 2500000,
+  "jumlah": "30",
+  "satuan": "PORSI",
+  "komposisi": "Cotton candy cup 650 ml; Dimsum; Croffle chocolate"
+ },
+ {
+  "kategori": "Paket Hemat Bundling",
+  "nama": "Cotton Candy Merakyat",
+  "varian": "Paket",
+  "harga": 3300000,
+  "jumlah": "30",
+  "satuan": "PORSI",
+  "komposisi": "Cotton candy bucket 1000 ml; Siomay; Waffle chocolate; Indomie ekonomis (setengah porsi)"
+ },
+ {
+  "kategori": "Paket Hemat Bundling",
+  "nama": "Cotton Candy Sultan",
+  "varian": "Paket",
+  "harga": 4800000,
+  "jumlah": "30",
+  "satuan": "PORSI",
+  "komposisi": "Cotton candy character; Street sushi; Fish pancake; Indomie ekonomis (setengah porsi); Pempek"
+ }
+]

@@ -1,0 +1,282 @@
+[
+ {
+  "mode": "fill",
+  "kategori": "Cotton Candy",
+  "nama": "Cotton Candy Character",
+  "varian": null,
+  "text": "Gula 5 kg\nStick besar\n(patokan untuk 50 pcs)"
+ },
+ {
+  "mode": "fill",
+  "kategori": "Cotton Candy",
+  "nama": "Cotton Candy Gulungan",
+  "varian": null,
+  "text": "Gula 5 kg\nStick besar\n(patokan untuk 50 pcs)"
+ },
+ {
+  "mode": "fill",
+  "kategori": "Popcorn",
+  "nama": "Popcorn Butter",
+  "varian": null,
+  "text": "Biji popcorn 1 kg untuk 20 pax"
+ },
+ {
+  "mode": "append",
+  "kategori": "Waffle Series",
+  "nama": "Waffle",
+  "varian": null,
+  "text": "Adonan 2 L (2,5 kg) per 50 pax"
+ },
+ {
+  "mode": "append",
+  "kategori": "Waffle Series",
+  "nama": "Korean Waffle",
+  "varian": null,
+  "text": "Adonan 2 L (2,5 kg) per 50 pax"
+ },
+ {
+  "mode": "append",
+  "kategori": "Waffle Series",
+  "nama": "Waffle Ice Cream",
+  "varian": null,
+  "text": "Adonan 2 L (2,5 kg) per 50 pax\nIce cream 5 liter per 50 pax / 8 liter per 100 pax"
+ },
+ {
+  "mode": "append",
+  "kategori": "Waffle Series",
+  "nama": "Croffle Ice Cream",
+  "varian": null,
+  "text": "Ice cream 5 liter per 50 pax / 8 liter per 100 pax"
+ },
+ {
+  "mode": "append",
+  "kategori": "Pancake Series",
+  "nama": "Fish Pancake Original",
+  "varian": null,
+  "text": "Adonan 3 L (3,7 kg) per 50 pax"
+ },
+ {
+  "mode": "append",
+  "kategori": "Pancake Series",
+  "nama": "Fish Pancake Mozzarella",
+  "varian": null,
+  "text": "Adonan 3 L (3,7 kg) per 50 pax\nMoza 1 potong per pax"
+ },
+ {
+  "mode": "append",
+  "kategori": "Pancake Series",
+  "nama": "Coin Pancake Original",
+  "varian": null,
+  "text": "Adonan 5 L (6,2 kg) per 50 pax\nMoza 1 potong per pax"
+ },
+ {
+  "mode": "append",
+  "kategori": "Pancake Series",
+  "nama": "Coin Pancake Premium",
+  "varian": null,
+  "text": "Adonan 5 L (6,2 kg) per 50 pax\nMoza 1 potong per pax"
+ },
+ {
+  "mode": "append",
+  "kategori": "Sweet Dessert",
+  "nama": "Ice Cream",
+  "varian": null,
+  "text": "Ice cream 5 liter per 50 pax / 8 liter per 100 pax\nPelengkap: Astor, Mesis, Rodeo"
+ },
+ {
+  "mode": "fill",
+  "kategori": "Sweet Dessert",
+  "nama": "Ice Cream Brownies",
+  "varian": null,
+  "text": "Ice cream 5 liter per 50 pax / 8 liter per 100 pax\nPelengkap: Astor, Mesis, Rodeo\nBrownies"
+ },
+ {
+  "mode": "fill",
+  "kategori": "Sweet Dessert",
+  "nama": "Ice Cream Cotton Candy",
+  "varian": null,
+  "text": "Ice cream 5 liter per 50 pax / 8 liter per 100 pax\nPelengkap: Astor, Mesis, Rodeo\nCotton candy cup 650 ml untuk 2 pax"
+ },
+ {
+  "mode": "fill",
+  "kategori": "Sweet Dessert",
+  "nama": "Donat",
+  "varian": null,
+  "text": "Dari vendor"
+ },
+ {
+  "mode": "fill",
+  "kategori": "Sweet Dessert",
+  "nama": "Mochi",
+  "varian": null,
+  "text": "Dari vendor"
+ },
+ {
+  "mode": "fill",
+  "kategori": "Sweet Dessert",
+  "nama": "Silky Pudding",
+  "varian": null,
+  "text": "Bubuk puding (sesuai rasa)"
+ },
+ {
+  "mode": "fill",
+  "kategori": "Sweet Dessert",
+  "nama": "Tiramisu",
+  "varian": null,
+  "text": "1 pax dari vendor"
+ },
+ {
+  "mode": "fill",
+  "kategori": "Sweet Dessert",
+  "nama": "Burn Cheese Cake",
+  "varian": null,
+  "text": "1 pax dari vendor"
+ },
+ {
+  "mode": "fill",
+  "kategori": "Savory Snack",
+  "nama": "Lasagna",
+  "varian": null,
+  "text": "Lasagna 1 per pax"
+ },
+ {
+  "mode": "fill",
+  "kategori": "Savory Snack",
+  "nama": "Mac N Cheese",
+  "varian": null,
+  "text": "Mac n cheese 1 per pax"
+ },
+ {
+  "mode": "fill",
+  "kategori": "Savory Snack",
+  "nama": "Spaghetti Brulee",
+  "varian": null,
+  "text": "Spaghetti brulee 1 per pax"
+ },
+ {
+  "mode": "fill",
+  "kategori": "Savory Snack",
+  "nama": "Dimsum Original",
+  "varian": null,
+  "text": "Dimsum 2 pcs per pax\nSaos hot 1 per 100 pax"
+ },
+ {
+  "mode": "fill",
+  "kategori": "Savory Snack",
+  "nama": "Dimsum Moza",
+  "varian": null,
+  "text": "Dimsum 2 pcs per pax\nMoza 1 potong"
+ },
+ {
+  "mode": "fill",
+  "kategori": "Savory Snack",
+  "nama": "Dimsum Mentai",
+  "varian": null,
+  "text": "Dimsum 2 pcs per pax\nMentai 1 kg per 50 pax"
+ },
+ {
+  "mode": "fill",
+  "kategori": "Savory Snack",
+  "nama": "Siomay",
+  "varian": null,
+  "text": "Siomay 2 pcs per pax\nKecap 1 pcs per 100 pax\nSaos hot 1 pcs per 100 pax"
+ },
+ {
+  "mode": "fill",
+  "kategori": "Savory Snack",
+  "nama": "Pempek",
+  "varian": null,
+  "text": "Pempek 2 pcs per pax\nCuko 1 botol (1 liter) per 100 pax\nMinyak 2 liter"
+ },
+ {
+  "mode": "append",
+  "kategori": "Drink Corner",
+  "nama": "Fresh Drink",
+  "varian": null,
+  "text": "Bubuk minuman 1 kg untuk 20 pax"
+ },
+ {
+  "mode": "append",
+  "kategori": "Drink Corner",
+  "nama": "Slushy Drink Juice",
+  "varian": null,
+  "text": "Juice 10 liter per 50 pax"
+ },
+ {
+  "mode": "append",
+  "kategori": "Drink Corner",
+  "nama": "Barista Grade",
+  "varian": null,
+  "text": "1 pax = 150 ml"
+ },
+ {
+  "mode": "append",
+  "kategori": "Indomie Party",
+  "nama": "Merakyat",
+  "varian": null,
+  "text": "Sawi 1 ikat per 50 pax\nCabe Rp5.000 per 100 pax"
+ },
+ {
+  "mode": "append",
+  "kategori": "Indomie Party",
+  "nama": "Juragan",
+  "varian": null,
+  "text": "Sosis 1/2 pcs per pax\nBakso 1/2 pcs per pax\nMinyak gelas 2 gelas per 50 pax\nSawi 1 ikat per 50 pax\nCabe Rp5.000 per 100 pax"
+ },
+ {
+  "mode": "append",
+  "kategori": "Indomie Party",
+  "nama": "Sultan",
+  "varian": null,
+  "text": "Saikoro 2 pcs per pax\nMinyak gelas 2 gelas per 50 pax\nSawi 1 ikat per 50 pax\nCabe Rp5.000 per 100 pax"
+ },
+ {
+  "mode": "fill",
+  "kategori": "Menu Lainnya",
+  "nama": "Soto Ayam + Bihun/Mie Kuning",
+  "varian": null,
+  "text": "1 pax dari vendor"
+ },
+ {
+  "mode": "fill",
+  "kategori": "Menu Lainnya",
+  "nama": "Lontong Opor Ayam",
+  "varian": null,
+  "text": "1 pax dari vendor"
+ },
+ {
+  "mode": "fill",
+  "kategori": "Menu Lainnya",
+  "nama": "Bakso Malang",
+  "varian": null,
+  "text": "1 pax dari vendor"
+ },
+ {
+  "mode": "fill",
+  "kategori": "Menu Lainnya",
+  "nama": "Nasi Soto Betawi",
+  "varian": null,
+  "text": "1 pax dari vendor"
+ },
+ {
+  "mode": "fill",
+  "kategori": "Menu Lainnya",
+  "nama": "Nasi Rendang",
+  "varian": null,
+  "text": "1 pax dari vendor"
+ },
+ {
+  "mode": "fill",
+  "kategori": "Menu Lainnya",
+  "nama": "Nasi Uduk + Semur",
+  "varian": null,
+  "text": "1 pax dari vendor"
+ },
+ {
+  "mode": "fill",
+  "kategori": "Menu Lainnya",
+  "nama": "Nasi Kuning Ayam Goreng",
+  "varian": null,
+  "text": "1 pax dari vendor"
+ }
+]
